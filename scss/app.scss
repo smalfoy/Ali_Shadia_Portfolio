@@ -1,0 +1,727 @@
+@charset 'utf-8';
+
+@import 'settings';
+@import 'foundation';
+@import 'motion-ui';
+@import url('https://fonts.googleapis.com/css?family=Homemade+Apple');
+@include foundation-global-styles;
+//@include foundation-grid;
+// @include foundation-flex-grid;
+@include foundation-xy-grid-classes;
+@include foundation-typography;
+@include foundation-button;
+@include foundation-forms;
+// @include foundation-range-input;
+@include foundation-accordion;
+@include foundation-accordion-menu;
+@include foundation-badge;
+@include foundation-breadcrumbs;
+@include foundation-button-group;
+@include foundation-callout;
+@include foundation-card;
+@include foundation-close-button;
+@include foundation-menu;
+@include foundation-menu-icon;
+@include foundation-drilldown-menu;
+@include foundation-dropdown;
+@include foundation-dropdown-menu;
+@include foundation-responsive-embed;
+@include foundation-label;
+@include foundation-media-object;
+@include foundation-off-canvas;
+@include foundation-orbit;
+@include foundation-pagination;
+@include foundation-progress-bar;
+// @include foundation-progress-element;
+// @include foundation-progress-element;
+// @include foundation-meter-element;
+@include foundation-slider;
+@include foundation-sticky;
+@include foundation-reveal;
+@include foundation-switch;
+@include foundation-table;
+@include foundation-tabs;
+@include foundation-thumbnail;
+@include foundation-title-bar;
+@include foundation-tooltip;
+@include foundation-top-bar;
+@include foundation-visibility-classes;
+// @include foundation-float-classes;
+@include foundation-flex-classes;
+
+// @include foundation-prototype-classes;
+
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
+//Custom Css
+
+body {
+	background-color: #e7f9fb;}
+
+.hidden{
+	display:none;
+}
+
+.boxHelper {
+    color: #fff;
+    background: #000;
+    text-align: center;
+	height:100px;
+	width:100%;
+}
+
+.footer{
+	background-color:#002c3c;
+	color:rgba(255,255,255, 0.5);
+	text-align:left;
+	font-size:1.3em;
+	margin-bottom:-2em;
+}
+
+ul li{
+	font-size:1.3rem;
+
+}
+
+* {
+  font-family:sans-serif;
+}
+
+
+li {
+  color:#fff;
+  list-style:none;
+  position: relative;
+  padding-left:50px;
+  font-size:32px;
+	line-height:40px;
+}
+
+li:before {
+  font-family:FontAwesome;
+  position: absolute;
+  left: 0;
+  color:#026489;
+  font-size:32px;
+}
+
+
+li.two:before {
+   content:"\f054";
+}
+
+li:hover:before {
+  color:#efe270;
+}
+
+.footer{
+	background-color:#002c3c;
+	height:8vh;
+}
+
+
+$topbar-center-logo-bg:#002c3c;
+
+.topbar-center-logo {
+  background: $topbar-center-logo-bg;
+
+  .menu {
+    background: $topbar-center-logo-bg;
+
+    a {
+      color: $white;
+    }
+  }
+}
+
+.topbar-center-logo .top-bar-center {
+  flex: 1 0 auto;
+
+  @include breakpoint(small only) {
+    display: none;
+  }
+}
+
+.topbar-center-logo-mobile {
+  background: $topbar-center-logo-bg;
+
+  .menu-icon {
+    vertical-align: text-top;
+  }
+}
+
+
+
+//menu style
+
+$menu-hover-lines-transition: all 0.35s ease;
+$menu-hover-lines-border-width: 1px;
+
+.menu-hover-lines {
+  text-align: center;
+  letter-spacing: 1px;
+  transition: $menu-hover-lines-transition;
+
+  li a {
+    padding: 0.75rem 0;
+    color: rgba($white, 0.7);
+    position: relative;
+    margin-left: 1rem;
+  }
+
+  li:first-child a {
+    margin-left: 0;
+  }
+
+  li.active > a {
+    background-color: transparent;
+  }
+
+  a:before,
+  a::after {
+    height: $menu-hover-lines-border-width;
+    position: absolute;
+    content: '';
+    transition: $menu-hover-lines-transition;
+    background-color: #efe270;
+    width: 0;
+  }
+
+  a::before {
+    top: 0;
+    left: 0;
+  }
+
+  a::after {
+    bottom: 0;
+    right: 0;
+  }
+
+  a:hover,
+  li.active > a {
+    color: $white;
+    transition: $menu-hover-lines-transition;
+  }
+
+  a:hover::before,
+  .active a::before,
+  a:hover::after,
+  .active a::after {
+    width: 100%;
+  }
+}
+
+
+
+//working area start
+
+
+
+.skills-container{
+background-image: url("https://www.transparenttextures.com/patterns/stardust.png"), linear-gradient(to bottom, #002c3c, #7781bc);
+	height:100vh;
+
+	}
+
+.dev-container{
+
+	height:100vh;
+	font-size:3.6em;
+	font-family: Century Gothic;
+
+color:$white;
+}
+
+.development{
+
+}
+.des-container{
+	height:100vh;
+	font-size:3.6em;
+	font-family: Century Gothic;
+
+color:$white;
+}
+
+.design-container{
+	background-image: url("https://www.transparenttextures.com/patterns/stardust.png"),linear-gradient(to bottom, #7781bc, #76acbd, #76a9bd, #76a5bd, #77a2bc);
+	height:100vh;
+
+}
+
+.develop-container{
+	background-image: url("https://www.transparenttextures.com/patterns/transparent-square-tiles.png"),linear-gradient(to bottom, #77a2bc, #6e9abb, #6792ba, #638ab8, #6181b5);
+	height:100vh;
+
+}
+
+.photography-container{
+
+	background-image: url("https://www.transparenttextures.com/patterns/tree-bark.png"), linear-gradient(to bottom, #6181b5, #3c82ae, #1181a0, #007f8e, #017b79);
+}
+
+.contact-container{
+	height:100vh;
+	background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png"), linear-gradient(to bottom, #017b79, #00717a, #006779, #005d76, #002c3c);
+}
+
+
+
+.thumbnail{
+	margin: 0 auto;
+	    width: 99%;
+}
+
+
+
+.image {
+  width: 100%;
+  height: auto;
+	display:block;
+}
+
+.overlay {
+	position: absolute;
+	  top: 0;
+	  bottom: 0;
+	  left: 0;
+	  right: 0;
+
+	  opacity:0;
+	  transition: .4s ease-in;
+	  background-color: rgba(0,82,112, 0.8);
+z-index:99;
+}
+
+.cont {
+  position: relative;
+}
+
+.cont:hover .overlay {
+  opacity: 1;
+	box-shadow: inset 0 0 0 5px #efe270;
+
+	z-index:99;
+}
+
+.text {
+	color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+	z-index:99;
+	width:90%;
+}
+
+.large-title{
+	font-size:2.5em;
+	font-family:Century Gothic;
+	text-align:center;
+	color:$white;
+	letter-spacing:4px;
+}
+
+.large-tagline{
+	font-size:1em;
+	font-family:Century Gothic;
+	text-align:center;
+	color:$white;
+	letter-spacing:2px;
+	margin-bottom:30px;
+
+}
+
+
+//skills
+
+
+.title {
+  font-weight: bold;
+  font-size: 20px;
+  color: #db3a34;
+}
+
+.bar {
+  width: 90%;
+  height: 35px;
+  background: #fff;
+  border-radius: 5px;
+  position: relative;
+  transition: all 2s linear;
+}
+
+.bar-1,
+.my-skills {
+  width: 80%;
+  margin: 10px auto 25px;
+}
+
+.bar-inner {
+  width: 0;
+  height: 35px;
+  line-height: 35px;
+  background: #db3a34;
+  border-radius: 5px 0 0 5px;
+}
+
+.bar-percent {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 18px;
+}
+//end skills
+
+
+
+
+
+
+
+
+//end
+
+
+//contact
+.form {
+  margin-top: 20px;
+	label {
+		font-size: 30px;
+		padding: 5px;
+	}
+	input, textarea {
+		margin-top: 10px;
+		border:none;
+		color: white;
+
+		background-color: transparent;
+		box-shadow: none;
+		border-bottom: solid 2px #c9c9c9;
+		transition: border 0.3s;
+
+		&:focus,
+		&.focus {
+			background-color: transparent;
+			border-bottom: solid 2px #bd0400;
+		}
+	}
+	.submit {
+		text-align: center;
+		button {
+		//	text-transform: uppercase;
+			font: 17px 'Open Sans';
+			border: none;
+			background: none;
+			cursor: pointer;
+			padding: 25px 80px;
+			display: inline-block;
+			margin: 15px 30px;
+			letter-spacing: 5px;
+			outline: none;
+			position: relative;
+			-webkit-transition: all 0.3s;
+			-moz-transition: all 0.3s;
+			transition: all 0.3s;
+			&:hover {
+				letter-spacing: 7px;
+				color: #bd0400;
+			}
+		}
+	}
+
+}
+
+
+
+//queries
+
+//small
+
+@media screen and (max-width: 39.9375em) {
+
+
+
+
+ .bg{
+		background-image: url('/images/desk-bg.png');
+ display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    box-sizing: border-box;
+    min-height: 280px;
+    padding-bottom: 25px;
+		 height:95vh;
+		 background-size:cover;
+		 overflow:hidden;
+
+
+
+}
+
+		.tagline{
+
+  font-size: 0.7em;
+  font-family: "Century Gothic";
+  color: rgb(228, 236, 239);
+
+
+
+
+
+}
+
+
+
+.skills-container{
+background-image: linear-gradient(to bottom, #348a9f, #4793a6, #589cad, #68a6b5, #77afbc);
+	height:100vh;
+
+	}
+
+.dev-container{
+
+	height:60vh;
+	font-size:3.6em;
+	font-family: Century Gothic;
+
+color:$white;
+}
+
+.development{
+
+}
+.des-container{
+	height:60vh;
+	font-size:3.6em;
+	font-family: Century Gothic;
+
+color:$white;
+}
+
+.design-container{
+	background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png"),linear-gradient(to bottom, #77afbc, #76acbd, #76a9bd, #76a5bd, #77a2bc);
+	height:100%;
+
+}
+
+.develop-container{
+	background-image:  linear-gradient(to bottom, #77a2bc, #6e9abb, #6792ba, #638ab8, #6181b5);
+	height:100%;
+margin-bottom:100px;
+}
+
+.photography-container{
+	height:100%;
+
+	background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png"), linear-gradient(to bottom, #6181b5, #3c82ae, #1181a0, #007f8e, #017b79);
+}
+
+.contact-container{
+
+	background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png"), linear-gradient(to bottom, #017b79, #00717a, #006779, #005d76, #002c3c);
+}
+
+
+
+.quote{
+	font-size:1.1em;
+font-style:Italic;
+	color: rgba(255,255,255, 0.7);
+	text-align:center;
+	background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+
+}
+
+.about-container{
+	background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png"), linear-gradient(to bottom, #002c3c, #0e607c, #1b6d88, #277c94, #348a9f);
+height:100vh;
+
+}
+
+.about{
+	font-size:3em;
+
+	font-family: Century Gothic;
+text-align:center;
+color:$white;
+letter-spacing:5px;
+
+
+}
+
+
+.skills{
+	font-size:4em;
+	font-family:Century Gothic;
+	text-align:center;
+	color:$white;
+	letter-spacing:5px;
+}
+
+.me{
+		font-size: 1.4em;
+		color:$white;
+		height:50vh;
+
+
+
+
+}
+
+.me-pic img{
+
+
+
+}
+
+
+
+}
+
+
+
+
+
+
+//medium
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+
+
+ .bg{
+		background-image: url('../images/desk-bg.png');
+ display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    box-sizing: border-box;
+    min-height: 280px;
+    padding-bottom: 25px;
+		 height:50vh;
+		 background-size:cover;
+		 overflow:hidden;
+
+
+
+
+}
+
+
+	.tagline{
+
+  font-size: 1.3em;
+  font-family: "Century Gothic";
+  color: rgb(228, 236, 239);
+ margin-left:25%;
+
+
+
+
+}
+
+
+
+
+}
+
+
+//large
+@media screen and (min-width: 64em) {
+
+	 .bg{
+	background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png"), url('../images/desktop.png');
+
+   background-position: center top;
+     overflow-x: hidden;
+		 height:90vh;
+
+
+
+}
+
+	.tagline{
+
+  font-size: 2.2em;
+  font-family: "Century Gothic";
+  color: rgb(228, 236, 239);
+ margin-left:18%;
+ letter-spacing:4px;
+
+}
+
+.quote{
+	font-size:1.1em;
+font-style:Italic;
+	color: rgba(255,255,255, 0.7);
+	text-align:center;
+	background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+
+}
+
+.about-container{
+	background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png"), linear-gradient(to bottom, #002c3c, #0e607c, #1b6d88, #277c94, #002c3c);
+height:100vh;
+
+}
+
+.about{
+	font-size:5em;
+	padding-top:20px;
+	font-family: Century Gothic;
+text-align:center;
+color:$white;
+letter-spacing:10px;
+
+
+}
+
+
+.skills{
+	font-size:7em;
+	padding-top:20px;
+	font-family:Century Gothic;
+	text-align:center;
+	color:$white;
+	letter-spacing:10px;
+}
+
+.me{
+		font-size: 1.4em;
+		color:$white;
+		height:80vh;
+		margin-top:25vh;
+
+
+
+}
+
+.me-pic img{
+	margin-top:25vh;
+
+	display:block;
+
+}
+
+
+
+	}
