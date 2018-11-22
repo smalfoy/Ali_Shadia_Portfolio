@@ -17,7 +17,7 @@ My portfolio
 First download it with Git:
 
 ```bash
-git clone https://github.com/zurb/foundation-sites-template projectname
+git clone https://github.com/smalfoy/Ali_Shadia_Portfolio.git
 ```
 
 Then open the folder in your command line, and install the needed dependencies:
