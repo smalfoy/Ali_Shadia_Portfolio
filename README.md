@@ -2,13 +2,14 @@
 
 My portfolio
 
-## Installation
-
-To use this template, your computer needs:
+## Prerequisites / Built With
 
 - [NodeJS](https://nodejs.org/en/) (0.12 or greater)
 - [Git](https://git-scm.com/)
-- [Gulp](https://git-scm.com/)
+- [Gulp.js](https://gulpjs.com/)
+- [SASS] (https://sass-lang.com/)
+- [Zurb Foundation 6] (https://foundation.zurb.com/)
+- [npm] (https://www.npmjs.com/) 
 
 
 ### Setup
@@ -22,7 +23,7 @@ git clone https://github.com/zurb/foundation-sites-template projectname
 Then open the folder in your command line, and install the needed dependencies:
 
 ```bash
-cd projectname
+cd Ali_Shadia_Portfolio
 npm install
 ```
 
