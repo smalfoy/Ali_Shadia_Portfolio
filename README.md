@@ -7,9 +7,9 @@ My portfolio
 - [NodeJS](https://nodejs.org/en/) (0.12 or greater)
 - [Git](https://git-scm.com/)
 - [Gulp.js](https://gulpjs.com/)
-- [SASS] (https://sass-lang.com/)
-- [Zurb Foundation 6] (https://foundation.zurb.com/)
-- [npm] (https://www.npmjs.com/) 
+- [SASS](https://sass-lang.com/)
+- [Zurb Foundation 6](https://foundation.zurb.com/)
+- [npm](https://www.npmjs.com/) 
 
 
 ### Setup
