@@ -26,4 +26,4 @@ cd projectname
 npm install
 ```
 
-Finally, run `npm start` to run the Sass compiler. It will re-run every time you save a Sass file.
+Finally, run `npm start` to run the Sass compiler. The site will not show properly unless these steps are followed.
