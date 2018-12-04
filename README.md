@@ -21,6 +21,9 @@ Finally, run `npm start` to run the Sass compiler. The site will not show proper
 
 ## Built With
 
+- [particles.js](https://vincentgarreau.com/particles.js/)
+- [wow.JS](https://mynameismatthieu.com/WOW/)
+- [animate.css](https://daneden.github.io/animate.css/)
 - [NodeJS](https://nodejs.org/en/) (0.12 or greater)
 - [Git](https://git-scm.com/)
 - [Gulp.js](https://gulpjs.com/)
