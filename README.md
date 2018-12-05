@@ -21,6 +21,7 @@ Finally, run `npm start` to run the Sass compiler. The site will not show proper
 
 ## Built With
 
+- [baguetteBox](https://feimosi.github.io/baguetteBox.js/)
 - [vue.js](https://vincentgarreau.com/particles.js/)
 - [particles.js](https://vincentgarreau.com/particles.js/)
 - [wow.JS](https://mynameismatthieu.com/WOW/)
