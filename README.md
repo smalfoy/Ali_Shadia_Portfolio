@@ -16,7 +16,7 @@ cd Ali_Shadia_Portfolio
 npm install
 ```
 
-Finally, run `npm start` to run the Sass compiler. The site will not show properly unless these steps are followed.
+Finally, run `npm start` to run the Sass compiler. The site will not show properly unless these steps are followed. In development mode, the portfolio needs to be run on a live server (MAMP/WAMP) in order for the database and json to work.
 
 
 ## Built With
