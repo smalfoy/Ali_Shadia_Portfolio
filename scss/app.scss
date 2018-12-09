@@ -47,7 +47,7 @@
 @include foundation-dropdown-menu;
 
 // Layout components
-@include foundation-off-canvas;
+//@include foundation-off-canvas;
 @include foundation-reveal;
 @include foundation-sticky;
 @include foundation-title-bar;
@@ -63,30 +63,38 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
-//Custom Css
+//My Css
+
 
 body {
-	background-color: #e7f9fb;}
+	background-color: $body-bg;}
 
 .hidden{
 	display:none;
+}
+
+.wow {
+  visibility: hidden;
 }
 
 .boxHelper {
     color: #fff;
     background: #000;
     text-align: center;
-	height:100px;
-	width:100%;
+		height:100px;
+		width:100%;
 }
 
-.footer{
-	background-color:#002c3c;
-	color:rgba(255,255,255, 0.5);
+.footer-container{
+	background-color:$body-bg;
+	color:$white;
 	text-align:left;
 	font-size:1.3em;
-	margin-bottom:-2em;
+
 }
+
+
+//topbar style
 
 ul li{
 	font-size:1.3rem;
@@ -99,10 +107,10 @@ ul li{
 
 
 li {
-  color:#fff;
+  color:$black;
   list-style:none;
   position: relative;
-  padding-left:50px;
+  padding-left:10px;
   font-size:32px;
 	line-height:40px;
 }
@@ -121,16 +129,8 @@ li.two:before {
 }
 
 li:hover:before {
-  color:#efe270;
+  color:$menu-lines-color;
 }
-
-.footer{
-	background-color:#002c3c;
-	height:8vh;
-}
-
-
-$topbar-center-logo-bg:#002c3c;
 
 .topbar-center-logo {
   background: $topbar-center-logo-bg;
@@ -160,12 +160,15 @@ $topbar-center-logo-bg:#002c3c;
   }
 }
 
-
+p {
+	font-family:"Century Gothic"
+}
 
 //menu style
 
-$menu-hover-lines-transition: all 0.35s ease;
-$menu-hover-lines-border-width: 1px;
+.topbar-center-logo .menu a {
+    color: $white;
+}
 
 .menu-hover-lines {
   text-align: center;
@@ -193,7 +196,7 @@ $menu-hover-lines-border-width: 1px;
     position: absolute;
     content: '';
     transition: $menu-hover-lines-transition;
-    background-color: #efe270;
+    background-color: $menu-lines-color;
     width: 0;
   }
 
@@ -221,60 +224,22 @@ $menu-hover-lines-border-width: 1px;
   }
 }
 
+canvas {
+    display:block;
+    position: fixed;
 
-
-//working area start
-
-
-
-.skills-container{
-background-image: url("https://www.transparenttextures.com/patterns/stardust.png"), linear-gradient(to bottom, #002c3c, #7781bc);
-	height:100vh;
-
-	}
-
-.dev-container{
-
-	height:100vh;
-	font-size:3.6em;
-	font-family: Century Gothic;
-
-color:$white;
-}
-
-.development{
 
 }
-.des-container{
-	height:100vh;
-	font-size:3.6em;
-	font-family: Century Gothic;
-
-color:$white;
+//filters styling
+.filter {
+  .button-group {
+     justify-content: center;
+	   }
 }
+//end filters
 
-.design-container{
-	background-image: url("https://www.transparenttextures.com/patterns/stardust.png"),linear-gradient(to bottom, #7781bc, #76acbd, #76a9bd, #76a5bd, #77a2bc);
-	height:100vh;
 
-}
-
-.develop-container{
-	background-image: url("https://www.transparenttextures.com/patterns/transparent-square-tiles.png"),linear-gradient(to bottom, #77a2bc, #6e9abb, #6792ba, #638ab8, #6181b5);
-	height:100vh;
-
-}
-
-.photography-container{
-
-	background-image: url("https://www.transparenttextures.com/patterns/tree-bark.png"), linear-gradient(to bottom, #6181b5, #3c82ae, #1181a0, #007f8e, #017b79);
-}
-
-.contact-container{
-	height:100vh;
-	background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png"), linear-gradient(to bottom, #017b79, #00717a, #006779, #005d76, #002c3c);
-}
-
+//overlays and thumbnails
 
 
 .thumbnail{
@@ -283,13 +248,11 @@ color:$white;
 }
 
 
-
 .image {
-  width: 100%;
+  width: 90%;
   height: auto;
-	display:block;
-}
 
+}
 .overlay {
 	position: absolute;
 	  top: 0;
@@ -302,20 +265,20 @@ color:$white;
 	  background-color: rgba(0,82,112, 0.8);
 z-index:99;
 }
-
 .cont {
   position: relative;
+
 }
 
 .cont:hover .overlay {
   opacity: 1;
-	box-shadow: inset 0 0 0 5px #efe270;
+	box-shadow: inset 0 0 0 5px #fefefe;
 
 	z-index:99;
 }
 
 .text {
-	color: white;
+	color: $white;
   font-size: 20px;
   position: absolute;
   top: 50%;
@@ -327,410 +290,357 @@ z-index:99;
 	width:90%;
 }
 
-.large-title{
-	font-size:2.5em;
-	font-family:Century Gothic;
+.pimg{
+}
+.ptext{
+
 	text-align:center;
-	color:$white;
-	letter-spacing:4px;
+	font-size:1.3em;
+}
+.top{
+	background-color:$yellow-accent;
+	width:100%;
 }
 
-.large-tagline{
+
+//end overlays and thumnbnails
+//start contact form
+
+.contact-container{
+	background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png"),linear-gradient(to bottom, #002c3c, #005d76, #006779, #00717a, #017b79,#002c3c);
+
+}
+.contact-form{
+	width:80%;
+}
+.form-control{
+	border-bottom:5px solid $yellow-accent;
+	color:$body-bg;
+	font-size:18px;
+}
+input{
+	height:45px;
+	color:#000;
+}
+form.submit{
+	background-color:$yellow-accent;
+	color:$body-bg;
+	font-weight:bold;
+	height:20px;
+	margin-top:20px;
+}
+
+form .submit:hover{
+	background-color:$yellow-accent;
+	color:$body-bg;
+}
+[type='text'], [type='password'], [type='date'], [type='datetime'], [type='datetime-local'], [type='month'], [type='week'], [type='email'], [type='number'], [type='search'], [type='tel'], [type='time'], [type='url'], [type='color'], textarea {
+    display: block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    height: 2.4375rem;
+    margin: 0 0 1rem;
+    padding: .5rem;
+    border: 1px solid $yellow-accent;
+    border-radius: 0;
+    background-color: rgba(255,255,255, 0.9);
+}
+//end contact form
+
+//muh queries
+
+//small
+@media screen and (max-width: 39.9375em) {
+
+	//start small landing page
+		.tagline{
+			font-size: 1em;
+		font-family: "Century Gothic";
+		color: rgb(228, 236, 239);
+		letter-spacing:2px;
+		position: absolute;
+		text-align:center;}
+
+		.index-container{
+			height:87vh;}
+
+//end small landing page
+
+//start SMALL about page
+.about-container{
+	background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png"), linear-gradient(to bottom, #002c3c, #0e607c, #1b6d88, #277c94, #348a9f,#002c3c);
+	padding-top:5%;
+	height:80vh;
+}
+
+.about-pic{
+
+
+}
+
+.about-header{
+font-size:2em;
+font-family: "Century Gothic";
+text-align:center;
+color:$white;
+letter-spacing:3px;
+
+}
+
+
+.about-text{
+font-size:1em;
+font-family:"Century Gothic";
+text-align:justify;
+color:$white;
+
+}
+//end SMALL about page
+//start SMALL work page
+
+.work-container{
+background-image: url('https://www.transparenttextures.com/patterns/stardust.png'),linear-gradient(to bottom, #002c3c, #7781bc,#002c3c);
+
+}
+.work-header{
+font-size:2em;
+font-family: "Century Gothic";
+text-align:center;
+color:$white;
+letter-spacing:3px;
+
+}
+
+//end SMALL work page
+//start small gallery
+.large-title{
 	font-size:1em;
 	font-family:Century Gothic;
 	text-align:center;
 	color:$white;
-	letter-spacing:2px;
-	margin-bottom:30px;
-
+	letter-spacing:1px;
+	font-weight:bold;
 }
 
-
-//skills
-
-
-.title {
-  font-weight: bold;
-  font-size: 20px;
-  color: #db3a34;
-}
-
-.bar {
-  width: 90%;
-  height: 35px;
-  background: #fff;
-  border-radius: 5px;
-  position: relative;
-  transition: all 2s linear;
-}
-
-.bar-1,
-.my-skills {
-  width: 80%;
-  margin: 10px auto 25px;
-}
-
-.bar-inner {
-  width: 0;
-  height: 35px;
-  line-height: 35px;
-  background: #db3a34;
-  border-radius: 5px 0 0 5px;
-}
-
-.bar-percent {
-  position: absolute;
-  right: 10px;
-  top: 5px;
-  font-size: 18px;
-}
-//end skills
-
-
-
-
-
-
-
-
-//end
-
-
-//contact
-.form {
-  margin-top: 20px;
-	label {
-		font-size: 30px;
-		padding: 5px;
-	}
-	input, textarea {
-		margin-top: 10px;
-		border:none;
-		color: white;
-
-		background-color: transparent;
-		box-shadow: none;
-		border-bottom: solid 2px #c9c9c9;
-		transition: border 0.3s;
-
-		&:focus,
-		&.focus {
-			background-color: transparent;
-			border-bottom: solid 2px #bd0400;
-		}
-	}
-	.submit {
-		text-align: center;
-		button {
-		//	text-transform: uppercase;
-			font: 17px 'Open Sans';
-			border: none;
-			background: none;
-			cursor: pointer;
-			padding: 25px 80px;
-			display: inline-block;
-			margin: 15px 30px;
-			letter-spacing: 5px;
-			outline: none;
-			position: relative;
-			-webkit-transition: all 0.3s;
-			-moz-transition: all 0.3s;
-			transition: all 0.3s;
-			&:hover {
-				letter-spacing: 7px;
-				color: #bd0400;
-			}
-		}
-	}
-
-}
-
-
-
-//queries
-
-//small
-
-@media screen and (max-width: 39.9375em) {
-
-
-
-
- .bg{
-		background-image: url('/images/desk-bg.png');
- display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    box-sizing: border-box;
-    min-height: 280px;
-    padding-bottom: 25px;
-		 height:95vh;
-		 background-size:cover;
-		 overflow:hidden;
-
-
-
-}
-
-		.tagline{
-
-  font-size: 0.7em;
-  font-family: "Century Gothic";
-  color: rgb(228, 236, 239);
-
-
-
-
-
-}
-
-
-
-.skills-container{
-background-image: linear-gradient(to bottom, #348a9f, #4793a6, #589cad, #68a6b5, #77afbc);
-	height:100vh;
-
-	}
-
-.dev-container{
-
-	height:60vh;
-	font-size:3.6em;
-	font-family: Century Gothic;
-
-color:$white;
-}
-
-.development{
-
-}
-.des-container{
-	height:60vh;
-	font-size:3.6em;
-	font-family: Century Gothic;
-
-color:$white;
-}
-
-.design-container{
-	background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png"),linear-gradient(to bottom, #77afbc, #76acbd, #76a9bd, #76a5bd, #77a2bc);
-	height:100%;
-
-}
-
-.develop-container{
-	background-image:  linear-gradient(to bottom, #77a2bc, #6e9abb, #6792ba, #638ab8, #6181b5);
-	height:100%;
-margin-bottom:100px;
-}
-
-.photography-container{
-	height:100%;
-
-	background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png"), linear-gradient(to bottom, #6181b5, #3c82ae, #1181a0, #007f8e, #017b79);
-}
-
-.contact-container{
-
-	background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png"), linear-gradient(to bottom, #017b79, #00717a, #006779, #005d76, #002c3c);
-}
-
-
-
-.quote{
-	font-size:1.1em;
-font-style:Italic;
-	color: rgba(255,255,255, 0.7);
-	text-align:center;
-	background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
-
-}
-
-.about-container{
-	background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png"), linear-gradient(to bottom, #002c3c, #0e607c, #1b6d88, #277c94, #348a9f);
-height:100vh;
-
-}
-
-.about{
-	font-size:3em;
-
-	font-family: Century Gothic;
-text-align:center;
-color:$white;
-letter-spacing:5px;
-
-
-}
-
-
-.skills{
-	font-size:4em;
+.large-tagline{
+	font-size:0.8em;
 	font-family:Century Gothic;
 	text-align:center;
 	color:$white;
-	letter-spacing:5px;
-}
-
-.me{
-		font-size: 1.4em;
-		color:$white;
-		height:50vh;
-
-
-
+	letter-spacing:0px;
 
 }
-
-.me-pic img{
-
-
-
-}
-
-
+.yellow-bg{
+	font-size:1em;
+	padding:5px;
+	letter-spacing:2px;
+	font-family: 'Homemade Apple', cursive;
 
 }
-
-
+//end small gallery
+}//end small
 
 
 
 
 //medium
-
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
 
-
- .bg{
-		background-image: url('../images/desk-bg.png');
- display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    box-sizing: border-box;
-    min-height: 280px;
-    padding-bottom: 25px;
-		 height:50vh;
-		 background-size:cover;
-		 overflow:hidden;
+	//start medium landing page
+		.tagline{
+		font-size: 1.3em;
+		font-family: "Century Gothic";
+		color: rgb(228, 236, 239);
+		letter-spacing:5px;
+		position: absolute;
+		text-align:center;}
 
 
+		.index-container{
+			height:87vh;
+}
+//end medium landing page
+
+//start MEDIUM about page
+.about-container{
+	background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png"), linear-gradient(to bottom, #002c3c, #0e607c, #1b6d88, #277c94, #348a9f,#002c3c);
+	padding-top:5%;
+	height:80vh;
+
+}
+
+.about-pic{
 
 
 }
 
-
-	.tagline{
-
-  font-size: 1.3em;
-  font-family: "Century Gothic";
-  color: rgb(228, 236, 239);
- margin-left:25%;
-
-
-
+.about-header{
+font-size:2.6em;
+font-family: "Century Gothic";
+text-align:center;
+color:$white;
+letter-spacing:3px;
 
 }
 
 
+.about-text{
+font-size:1em;
+font-family:"Century Gothic";
+text-align:justify;
+color:$white;
+
+}
+
+	//end MEDIUM about page
+	//start MEDIUM work page
+
+	.work-container{
+	background-image: url('https://www.transparenttextures.com/patterns/stardust.png'),linear-gradient(to bottom, #002c3c, #7781bc,#002c3c);
+
+	}
+	.work-header{
+	font-size:2.6em;
+	font-family: "Century Gothic";
+	text-align:center;
+	color:$white;
+	letter-spacing:3px;
+
+	}
+
+	//end MEDIUM work page
+//start medium gallery
+.large-title{
+	font-size:0.6em;
+	font-family:Century Gothic;
+	text-align:center;
+	color:$white;
+	letter-spacing:0px;
+	font-weight:bold;
+}
+
+.large-tagline{
+	font-size:0.7em;
+	font-family:Century Gothic;
+	text-align:center;
+	color:$white;
+	letter-spacing:0px;
+
+}
+.yellow-bg{
+	font-size:2em;
+	padding:5px;
+	letter-spacing:2px;
+	font-family: 'Homemade Apple', cursive;
+
+}
+//end medium gallery
 
 
 }
+//end medium
+
 
 
 //large
 @media screen and (min-width: 64em) {
 
-	 .bg{
-	background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png"), url('../images/desktop.png');
-
-   background-position: center top;
-     overflow-x: hidden;
-		 height:90vh;
-
-
-
-}
-
+//start large landing page
 	.tagline{
+		font-size: 2em;
+	font-family: "Century Gothic";
+	color: rgb(228, 236, 239);
+	letter-spacing:8px;
+	position: absolute;
+	text-align:center;}
 
-  font-size: 2.2em;
-  font-family: "Century Gothic";
-  color: rgb(228, 236, 239);
- margin-left:18%;
- letter-spacing:4px;
+	.index-container{
+		height:87vh;}
 
-}
+		//end large landing page
 
-.quote{
-	font-size:1.1em;
-font-style:Italic;
-	color: rgba(255,255,255, 0.7);
-	text-align:center;
-	background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
-
-}
+//start LARGE about page
 
 .about-container{
-	background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png"), linear-gradient(to bottom, #002c3c, #0e607c, #1b6d88, #277c94, #002c3c);
-height:100vh;
+	background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png"), linear-gradient(to bottom, #002c3c, #0e607c, #1b6d88, #277c94, #348a9f,#002c3c);
+	padding-top:5%;
+	height:80vh;
 
 }
 
-.about{
-	font-size:5em;
-	padding-top:20px;
-	font-family: Century Gothic;
+.about-pic{
+
+
+}
+
+.about-header{
+font-size:3.5em;
+font-family: "Century Gothic";
 text-align:center;
 color:$white;
-letter-spacing:10px;
-
+letter-spacing:5px;
 
 }
 
 
-.skills{
-	font-size:7em;
-	padding-top:20px;
+.about-text{
+font-size:1.2em;
+font-family:"Century Gothic";
+text-align:justify;
+color:$white;
+
+}
+
+//end LARGE about page
+//start large gallery
+.large-title{
+	font-size:1.1em;
 	font-family:Century Gothic;
 	text-align:center;
 	color:$white;
-	letter-spacing:10px;
+	letter-spacing:1px;
+	font-weight:bold;
 }
 
-.me{
-		font-size: 1.4em;
-		color:$white;
-		height:80vh;
-		margin-top:25vh;
+.large-tagline{
+	font-size:0.8em;
+	font-family:Century Gothic;
+	text-align:center;
+	color:$white;
+	letter-spacing:1px;
+
+}
+//end large gallery
 
 
+//start LARGE work page
+
+.work-container{
+background-image: url('https://www.transparenttextures.com/patterns/stardust.png'),linear-gradient(to bottom, #002c3c, #7781bc,#002c3c);
+
+}
+.work-header{
+font-size:3.5em;
+font-family: "Century Gothic";
+text-align:center;
+color:$white;
+letter-spacing:5px;
+
+}
+.yellow-bg{
+	font-size:3em;
+	padding:5px;
+	letter-spacing:2px;
+	font-family: 'Homemade Apple', cursive;
 
 }
 
-.me-pic img{
-	margin-top:25vh;
-
-	display:block;
-
-}
+//end LARGE work page
+//start LARGE contact page
 
 
+//end LARGE contactpage
 
-	}
+
+	} //end large

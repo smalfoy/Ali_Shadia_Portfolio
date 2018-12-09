@@ -1,17 +1,17 @@
 {
-  "name": "foundation-sites-template",
+  "name": "ali_s_autoapp",
   "version": "1.0.0",
-  "description": "Basic template for a new Foundation for Sites project.",
+  "description": "Roku Flashback app assignment.",
   "main": "gulpfile.js",
   "scripts": {
     "start": "gulp",
     "build": "gulp sass"
   },
-  "author": "ZURB <foundation@zurb.com>",
-  "license": "MIT",
+  "author": "Shadia Ali <shadia@shadiaali.ca>",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/zurb/foundation-sites/issues",
-    "email": "foundation@zurb.com"
+    "url": "https://github.com/smalfoy/Ali_S_Av_App/issues"
+
   },
   "dependencies": {
     "foundation-sites": "^6.5.1",
@@ -29,7 +29,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/zurb/foundation-sites-template.git"
+    "url": "git+https://github.com/smalfoy/Ali_S_AV_App.git"
   },
   "private": true
 }
