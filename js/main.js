@@ -6,6 +6,9 @@
           mainmessage : "Boozhoo! Nice to meet you! My name is Shadia. I am a student in the school of Contemporary Media at Fanshawe College. I am studying Interactive Media & Design. My passion is bringing ideas to life - from conceptualization to creation.",
           aboutheading : "About Me",
           workheading : "My Work",
+          videopath : "video/demo-reel.mp4",
+          demotext: "My Demo Reel",
+          demobody: "You can check out my demo reel below!",
 
 
             portfoliodata : [],
