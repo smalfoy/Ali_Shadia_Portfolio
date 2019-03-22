@@ -7,9 +7,15 @@
           aboutheading : "About Me",
           workheading : "My Work",
           videopath : "video/demo-reel.mp4",
-          demotext: "My Demo Reel",
-          demobody: "You can check out my demo reel below!",
-
+          demotext : "My Demo Reel",
+          demobody : "You can check out my demo reel below!",
+          itpath : "images/it.svg",
+          thunderbirdpath : "images/thunderbird.svg",
+          kittypath : "images/kitty.svg",
+          favthings : "3 Things:",
+          one : "I enjoy reading novels by Stephen King.",
+          two : "My clan's totem is the Thunderbird.",
+          three : "I ♥ black cats",
 
             portfoliodata : [],
             singleportfoliodata : [],

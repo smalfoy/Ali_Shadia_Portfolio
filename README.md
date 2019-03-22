@@ -1,9 +1,6 @@
 # Portfolio
 
-My portfolio.
-
-- [Url: shadiaali.ca](http://shadiaali.ca)
-
+My portfolio
 
 
 ### Setup
@@ -24,7 +21,6 @@ Finally, run `npm start` to run the Sass compiler. The site will not show proper
 
 ## Built With
 
-- [Perfundo](https://perfundo.oberlehner.net/) *pure css lightbox*
 - [vue.js](https://vue.com) *used for fetching the database content*
 - [particles.js](https://vincentgarreau.com/particles.js/) *used for the particle background on the landing page*
 - [wow.JS](https://mynameismatthieu.com/WOW/) *used for animating as you scroll*

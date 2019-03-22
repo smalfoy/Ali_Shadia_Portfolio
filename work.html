@@ -9,7 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
-  <link href="scss/perfundo.css" rel="stylesheet">
+  <link href="css/perfundo.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Homemade+Apple" rel="stylesheet">
 
 
@@ -54,37 +54,23 @@
 <!--start work container-->
 <div class="grid-x work-container"><h2 class="hidden"> My Work</h2>
 <div class="small-12 cell"><h2 class="work-header wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.1s">My Work</h2><br></div>
-<!--start button group for sorting-->
-<div class="small-12 cell filter">
-  <div class="button-group">
-    <button class="button filter-button is-active wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0s" data-filter="all">All</button>
-    <button class="button filter-button wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.1s" data-filter="dev">Develop</button>
-    <button class="button filter-button wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.2s" data-filter="des">Design</button>
-    <button class="button filter-button wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.3s" data-filter="photo">Photography</button>
-    <button class="button filter-button wow fadeInRight" data-wow-delay="0.4s" data-wow-duration="0.8s" data-filter="vid">Video</button>
-  </div></div>
-
-  <!--start first container-->
 
 
-<div class="grid-container wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.2s">
+ 
+
+
+<div class="grid-container fluid wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.2s">
   <div class="grid-x wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s" id="app"><h2 class="hidden">App container</h2>
 
 
- <div style="margin:4%;" class="cont small-11 medium-3 large-3 cell perfundo" v-for="portfolio in portfoliodata"  :class="portfolio.project_class">
+ <div style="margin:4%;" class="cont small-11 medium-5 large-5 cell" v-for="portfolio in portfoliodata"  :class="portfolio.project_class">
 
    <a :href="'#'"><img :src="'images/' + portfolio.project_thumb" class="thumbnail"></a>
     <div class="overlay"><div class="text">
-     <h3 class="large-title">{{ portfolio.project_title }}</h3><h4 class="large-tagline">{{ portfolio.project_tagline }}</h4> <hr> <br><div class="small-12 cell"><a :href="portfolio.project_modal" class="button expanded perfundo__link"><B>View Project</b> </a></div>
+     <h3 class="large-title">{{ portfolio.project_title }}</h3><h4 class="large-tagline">{{ portfolio.project_tagline }}</h4> <hr> <br><div class="small-12 cell"><a :href="portfolio.project_modal" class="button expanded"><B>View Project</b> </a></div>
 </div></div>
 
-<div v-bind:id="portfolio.modal_id" class="perfundo__overlay bounceIn">
-  <div class="perfundo__content perfundo__html">
-    <div class="grid-x pcont"><div class="small-12 cell pimg perfundo__image" style="text-align:center;"><img :src="'images/' + portfolio.project_image"></div>
-  </div> <figcaption class="perfundo__figcaption small-12 cell ptext"><div class="small-12 cell top"><span class="yellow-bg">{{ portfolio.project_title }}</span><h3 style="font-style:italic;margin-top:-3%;">{{ portfolio.project_tagline }}</h3></div><br> <div style="text-align:left;margin-left:10%;"><h5>Programs Used: <i>{{ portfolio.project_programs }}</i></h5></div><div style="text-align:left;margin-left:10%;"><h5>Role: <i>{{ portfolio.project_role }}</i></p></div><hr><p>{{ portfolio.project_text }}</p></figcaption>
-    </figure>   </div>
-  <a :href="'#perfundo-untarget'" class="perfundo__close perfundo__control">Close</a>
-</div>
+
 
 
 

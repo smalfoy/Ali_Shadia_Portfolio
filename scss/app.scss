@@ -73,6 +73,8 @@ body {
 	display:none;
 }
 
+body {overflow-x: hidden;}
+
 .wow {
   visibility: hidden;
 }
@@ -244,12 +246,12 @@ canvas {
 
 .thumbnail{
 	margin: 0 auto;
-	    width: 99%;
+	width:100%;
 }
 
 
 .image {
-  width: 90%;
+  width:100%;
   height: auto;
 
 }
@@ -290,8 +292,7 @@ z-index:99;
 	width:90%;
 }
 
-.pimg{
-}
+
 .ptext{
 
 	text-align:center;
