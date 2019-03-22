@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Work</title>
+    <title>Recycle Yourself</title>
     <link rel="stylesheet" href="css/app.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+  
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Homemade+Apple" rel="stylesheet">
 
@@ -52,34 +52,21 @@
   <!--content-->
 
 <!--start work container-->
-<div class="grid-x work-container"><h2 class="hidden"> My Work</h2>
-<div class="small-12 cell"><h2 class="work-header wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.1s">My Work</h2><br>
-
-  <center><a href="https://github.com/shadiaali" target="_blank"><i style="color:#efe270" class="fab fa-github about-header wow  rubberBand" data-wow-duration="2.7s" data-wow-delay="0.2s"></i></a>
-    <a href="https://github.com/shadiaali"><p style="color:#fff;" class="wow fadeInRight rubberBand" data-wow-duration="1s" data-wow-delay="0.1s">See my code @ Github</p></a> </center><br>
-    
+<div class="grid-x work-container"><h2 class="hidden"> Roku Flashback</h2>
+<div class="small-12 cell"><h2 class="work-header wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.1s">Roku Flashback</h2><br><center>
+<img src="images/roku.png"><br><hr>
+<div class="small-10 cell" style="text-align: center; color: #fff; background-color: rgba(10, 8, 46, 0.2);width:80%;height:100%;padding:1%;"><br><a target="_blank" href="roku-live.html" class="button medium">View Live Site</a> <a target="_blank" href="https://github.com/shadiaali/Ali_S_AV_App" class="button medium">View Github Repo</a><br>An audio / video app built using queries and database assets. A user is able to log in, filter and select a movie, tv show or audio to stream based on decade/era.<br><br></div>
+<br><br>
+   <button class="button hollow wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.1s" onclick="goBack()"><h3>Go Back</h3></button></center>
+</div>
 </div>
 
-
- 
-
-
-<div class="grid-container full wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.2s">
-  <div class="grid-x wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s" id="app"><h2 class="hidden">App container</h2>
-
-
- <div style="margin-left:8%; margin-right:8%;margin-bottom:1%; margin-top:1%;" class=" small-10 medium-10 large-10 cell" v-for="portfolio in portfoliodata">
-
-   
-   <div class="overlay">
-    <h3 style="color:#efe270; text-align: center;">{{ portfolio.project_title }}</h3><center><a :href="portfolio.project_modal" class="button medium hide-for-medium"><B>View Project</b> </a></center><h4 style="color:#fff; text-align: center"><i>{{ portfolio.project_tagline }}</i></h4>  <br><div class="small-12 cell"><center><a :href="portfolio.project_modal" class="button  show-for-medium" style="margin-bottom:6px;"><B>View Project</b> </a></center></div>
-</div>
-
- </div>
-
-
-
-</div><hr></div>
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+</div></div>
 
 
 <!--divider-->
@@ -106,7 +93,7 @@
     <script src="node_modules/foundation-sites/dist/js/foundation.js"></script>
 
     <script src="js/app.js"></script>
-    <script src="js/main.js"></script>
+    
 
   </body>
 </html>
