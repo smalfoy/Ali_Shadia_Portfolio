@@ -10,7 +10,30 @@
     	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
     	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
-
+      <script>
+        function _(id){ return document.getElementById(id); }
+        function submitForm(){
+          _("mybtn").disabled = true;
+          _("status").innerHTML = 'please wait ...';
+          var formdata = new FormData();
+          formdata.append( "n", _("n").value );
+          formdata.append( "e", _("e").value );
+          formdata.append( "m", _("m").value );
+          var ajax = new XMLHttpRequest();
+          ajax.open( "POST", "example_parser.php" );
+          ajax.onreadystatechange = function() {
+            if(ajax.readyState == 4 && ajax.status == 200) {
+              if(ajax.responseText == "success"){
+                _("my_form").innerHTML = '<center><div style="background-color:rgba(255,255,255, 0.4);" class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.1s"><h3 style="color:#efe270;">Thanks for reaching out, '+_("n").value+'! <br>Your email has been sent. <br>I will do my best to get back to you within 48 hours.</h3></div></center>';
+              } else {
+                _("status").innerHTML = ajax.responseText;
+                _("mybtn").disabled = false;
+              }
+            }
+          }
+          ajax.send( formdata );
+        }
+        </script>
 
   </head>
 
@@ -47,7 +70,7 @@
       <!-- /medium and larger nav bar -->
 	</header>
 
-<div class="small-12 wow fadeIn" data-wow-duration="0.6s" id="app">
+<div class="grid-container full wow fadeIn" data-wow-duration="0.6s" id="app">
   <!--content-->
 
 <!--start contact container-->
@@ -55,17 +78,29 @@
 
 
           <h2 class="about-header wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.1s">Contact Me</h2> <br>
-<center><a href="https://github.com/shadiaali"><i class="fab fa-github about-header"></i></a>
-<a href="https://github.com/shadiaali"><p style="color:#fff;" class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.1s">My Github</p></a> </center><br>
+
+<div class="grid-x" style="margin-left:15%;">
+          <div class="small-5 cell"><center><a href="https://www.linkedin.com/in/shadiaali/" target="_blank"><i style="color:#efe270" class="fab fa-linkedin about-header wow rubberBand" data-wow-duration="2.5s" data-wow-delay="0.1s"></i>
+  <h3 style="color:#fff; margin-top:6px;" class="wow rubberBand" data-wow-duration="3s" data-wow-delay="0.1s">My LinkedIn</h3></a></center></div>
+
+  <div class="small-5 cell"><center><a href="images/Shadia-Ali-Resume-2019-min.pdf" target="_blank"><i style="color:#efe270" class="fas fa-briefcase about-header wow rubberBand" data-wow-duration="2.5s" data-wow-delay="0.1s"></i>
+    <h3 style="color:#fff; margin-top:6px;" class="wow rubberBand" data-wow-duration="3s" data-wow-delay="0.1s">My Resume</h3></a></center></div>
+</div>
+  
+<br>
+
 <hr>
-<form style="margin:10%" id="contact-form" method="post" action="contact-form-handler.php">
-  <input name="name" type="text" class="form-control" placeholder="Your name" required>
+<center><h3 style="color:#fff; margin-top:6px;" class="wow rubberBand" data-wow-duration="3s" data-wow-delay="0.1s">You can contact me through the form below, or by emailing <b>shadia@shadiaali.ca</b></h3></center>
+
+<form style="margin-left:10%; margin-right:10%;margin-bottom:5%;margin-top:2%;" id="my_form" method="post" onsubmit="submitForm(); return false;">
+
+  <input id="n" name="name" type="text" class="form-control" placeholder="Your name" required>
   <br>
-  <input name="email" type="text" class="form-control" placeholder="Your email address" required>
+  <input id="e" name="email" type="email" required class="form-control" placeholder="Your email address" required>
   <br>
-  <textarea name="message" class="form-control" placeholder="Your Message" rows="6" required></textarea>
+  <textarea id="m" name="message" required class="form-control" placeholder="Your Message" rows="6" required></textarea>
   <br>
-  <input type="submit" class="form-control submit" value="SEND MESSAGE" >
+  <input id="mybtn"type="submit" class="form-control submit" value="SEND MESSAGE" > <span id="status"></span>
 </form>
 
 
@@ -94,7 +129,7 @@
     <script src="node_modules/what-input/dist/what-input.js"></script>
     <script src="node_modules/foundation-sites/dist/js/foundation.js"></script>
     <script src="js/app.js"></script>
-    <script src="js/main.js"></script>
+    
 
   </body>
 </html>
