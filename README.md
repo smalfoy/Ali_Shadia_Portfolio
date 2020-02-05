@@ -2,6 +2,9 @@
 
 My portfolio. Don't be upsetti. Have some spaghetti. 
 
+# Live Site
+shadiaali.ca
+
 
 
 ## Built With
