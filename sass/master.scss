@@ -1,0 +1,95 @@
+@import '_vars';
+@import 'modules/_nav';
+@import 'modules/_landing';
+@import 'modules/_about';
+@import 'modules/_work';
+@import 'modules/_contact';
+
+
+
+html {
+    height: 100% !important;
+}
+
+body {
+    min-height: 100% !important;
+    font-family: $bodyFont;
+
+}
+
+
+
+.boxHelper {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+
+
+//input
+.md-form.md-bg input[type=date],
+.md-form.md-bg input[type=datetime-local],
+.md-form.md-bg input[type=email],
+.md-form.md-bg input[type=number],
+.md-form.md-bg input[type=password],
+.md-form.md-bg input[type=search-md],
+.md-form.md-bg input[type=search],
+.md-form.md-bg input[type=tel],
+.md-form.md-bg input[type=text],
+.md-form.md-bg input[type=time],
+.md-form.md-bg input[type=url],
+.md-form.md-bg textarea.md-textarea {
+
+    background-color: #f5f5f5 !important;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#efe270), to(#efe270)), -webkit-gradient(linear, left top, left bottom, from(#ced4da), to(#ced4da)) !important;
+    background-image: linear-gradient(to bottom, #efe270, #efe270), linear-gradient(to bottom, #ced4da, #ced4da) !important;
+    background-size: 0 3px, 100% 3px;
+    -webkit-transition: -webkit-background-size 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+    -webkit-transition: background-size 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+    transition: background-size 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+}
+
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid #efe270 !important;
+}
+
+h1 {
+    font-family: $headerFont;
+}
+
+h2 {
+    font-family: $headerFont;
+
+}
+
+h3 {
+    font-family: $bodyFont;
+
+}
+
+h4 {
+    font-family: $bodyFont;
+
+}
+
+h5 {
+    font-family: $bodyFont;
+    line-height: 1.4em;
+
+}
+
+p {
+    font-family: $bodyFont;
+}
+
+a {
+    color: #086080;
+}
+
+a:hover {
+    color: #efe270;
+}

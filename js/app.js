@@ -1,23 +1,18 @@
-$(document).foundation();
+document.addEventListener('DOMContentLoaded', function () {
+  'use strict';
+  var link = document.querySelector('[data-toggle-menu]');
+  link.addEventListener('click', function () {
+    if (link.classList.contains('toggle-menu--clicked')) {
+      link.classList.remove('toggle-menu--clicked');
+    } else {
+      link.classList.add('toggle-menu--clicked');
+    }
+  }, false);
+}, false);
 
-
-//wow init
-		 new WOW().init();
-
-
-// shows/hide filtered items
-$(".filter-button").click(function() {
-  var value = $(this).attr('data-filter');
-  if(value === "all") {
-    $('.filter-item').show('1000');
-  } else {
-    $(".filter-item").not('.'+value).hide('3000');
-    $('.filter-item').filter('.'+value).show('3000');
-  }
-});
-
-// change active class on filter button
-$('.filter-button').click(function () {
-  $(this).siblings().removeClass('is-active');
-  $(this).addClass('is-active');
+$(function () {
+  $(document).scroll(function () {
+    var $nav = $(".navbar");
+    $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+  });
 });

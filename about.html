@@ -1,114 +1,189 @@
-<!doctype html>
-<html class="no-js" lang="en">
-  <head>
+<!DOCTYPE html>
+
+<head>
     <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shadia Ali Portfolio</title>
-      <link rel="stylesheet" href="css/app.css">
-      <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" rel="stylesheet">
-    	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.19/vue.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Shadia Ursula Ali | Full Stack Web Developer</title>
+    <meta name="description" content="content description">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:600|Merriweather+Sans:300&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.7/css/mdb.min.css" rel="stylesheet">
+    <!-- CSS -->
+    <link href="css/master.css" rel="stylesheet">
+
+    <!--vue-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.19/vue.min.js"></script>
+
+</head>
+
+<body style="background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png'),linear-gradient(to bottom, #002c3c, #0e607c, #1b6d88, #277c94, #348a9f, #002c3c);
+    padding-top: 5%;
+    background-attachment: fixed;">
+    <main id="app">
+        <!-- Main navigation -->
+        <header>
+
+            <!-- Navbar -->
+
+            <nav class="wow fadeIn navbar sticky-top navbar-dark navbar-expand-lg " data-wow-duration="2s">
+
+                <div data-wow-duration="2s" class="wow fadeIn navbar-collapse collapse dual-nav order-1 order-lg-0 ">
+                    <ul data-wow-duration="2s" class="wow fadeIn navbar-nav mx-auto">
+
+                        <li class="nav-item left text-center">
+                            <a class="wow fadeIn nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item left text-center">
+                            <a class="wow fadeIn nav-link" href="about.html">About</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <a data-wow-duration="2s" href="index.html" class="wow fadeIn navbar-brand mx-auto "><img class="logo"
+                        src="images/circle-logo.svg" alt="Shadia Ali Logo"></a>
+                <div data-wow-duration="2s" class="wow fadeIn navbar-collapse collapse dual-nav order-2">
+                    <ul data-wow-duration="2s" class="wow fadeIn mx-auto nav navbar-nav ml-auto">
+                        <li class="nav-item right text-center">
+                            <a class="wow fadeIn nav-link" href="work.html">My Work</a>
+                        </li>
+                        <li class="wow fadeIn nav-item right text-center">
+                            <a class="nav-link" href="contact.html">Get in Touch</a>
+                        </li>
+                    </ul>
+                </div>
 
 
 
-  </head>
+                <div data-wow-duration="2s" class="wow fadeIn navbar-toggler toggle-menu" data-toggle-menu
+                    data-target=".dual-nav" data-toggle="collapse">
+
+                    <a><span class="navbar-toggler-icon menu__bar"></span>
+                        <span class="navbar-toggler-icon menu__bar"></span>
+                        <span class="navbar-toggler-icon menu__bar"></span></a>
+                </div>
+
+            </nav>
 
 
-    <!--start grid-frame-->
-  		<header>
-
-        <!-- mobile nav bar -->
-      <div class="title-bar topbar-center-logo-mobile topbar-responsive wow fadeIn" data-responsive-toggle="topbar-center-logo" data-hide-for="medium">
-      <div class="title-bar-left">
-        <div class="title-bar-title"><a href="index.html"><img src="images/circle-logo.svg" style="height:39px;"  alt="logo" class="wow fadeIn" data-wow-delay="0.1s" data-wow-duration="6s"></a></div>
-      </div>
-      <div class="title-bar-right">
-        <button class="menu-icon" type="button" data-toggle="topbar-center-logo"></button>
-      </div>
-      </div>
-      <!-- /mobile nav bar -->
-
-      <!-- medium and larger nav bar -->
-      <div class="top-bar topbar-center-logo wow fadeIn" id="topbar-center-logo">
-
-      <div class="top-bar-center">
-        <a href="index.html"><img src="images/circle-logo.svg"  class="wow fadeIn" data-wow-delay="0.1s" data-wow-duration="6s" style="height:55px;" alt="logo"></a>
-      </div>
-      <div class="top-bar-right">
-        <ul class="menu vertical medium-horizontal menu-hover-lines">
-          <li class="wow fadeIn"  data-wow-duration="6s"><a href="index.html">Home</a></li>
-          <li class="wow fadeIn"  data-wow-duration="6s"><a href="about.html">About Me</a></li>
-          <li class="wow fadeIn"  data-wow-duration="6s"><a href="work.html">My Work</a></li>
-          <li class="wow fadeIn"  data-wow-duration="6s"><a href="contact.html">Get in Touch</a></li>
-          </ul>
-      </div>
-      </div>
-      <!-- /medium and larger nav bar -->
-	</header>
-
- <div class="grid-container full wow fadeIn" data-wow-duration="0.6s">
-  <!--content-->
-
-<!--start about container-->
-  			<div class="about-container grid-x grid-padding-x" id="app"><h2 class="hidden">About Shadia Ali</h2>
-
-          <div class="auto cell"></div>
-
-          <div class="small-12 medium-12 large-3 cell about-pic"><img src="images/me.png" alt="a picture of me" class="wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0s"></div>
+        </header>
+        <!-- /Navbar -->
 
 
-          <div class="small-12 medium-12 large-4 cell about-text"><h2 class="about-header wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.1s">{{ aboutheading }}</h2><p class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.2s">{{ mainmessage }} <hr class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s"> <br><p class=" wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.1s"><h2 class="about-header wow fadeInRight">{{ favthings }}</h2></p> <p class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.2s">{{ one }}</p>
-            <p class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.2s">{{ two }}</p>
-            <p class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.2s"> {{ three }}</p>
+        <!--start container-->
+        <div class="about-container container">
+            <div class="row mt-5 pt-5">
+                <div class="col-lg-10 text-white wow fadeIn">
+                    <h1>{{ aboutheading }}</h1>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="wow fadeIn col-lg-8 text-white text-justify">
+
+                    <h3>
+                        <hr>{{ mainmessage }}</h3><br>
+                    <h4>{{secondarymessage}}</h4>
+                    <hr>
+                    <div class="row wow fadeIn">
+                        <div class="col-lg-12"><br>
+                            <h2>{{toolsheader}}</h2><br>
+                            <h5>{{toolssub}}</h5>
+                        </div>
+                    </div><br>
+                    <div class="wow fadeIn row">
+                        <div class="col-lg-12 h3">Foundational</div>
+                        <div class="col-lg-4">HTML</div>
+                        <div class="col-lg-4">CSS</div>
+                        <div class="col-lg-4">PHP</div>
+                        <div class="col-lg-4">Javascript</div>
+                        <div class="col-lg-4">Git</div>
+                        <div class="col-lg-4">Adobe Suite</div>
+                        <div class="col-lg-4">SQL</div>
+                    </div>
+
+
+                    <div class="wow fadeIn row mt-5">
+                        <div class="col-lg-12 h3">Frameworks</div>
+                        <div class="col-lg-4">Vue</div>
+                        <div class="col-lg-4">Laravel</div>
+                        <div class="col-lg-4">Node</div>
+                        <div class="col-lg-4">Express</div>
+
+                    </div>
+
+
+                </div>
+                <div class="col-lg-4 text-center d-flex justify-content-center"><img style="height:45%;"
+                        src="images/me.png" alt="a picture of me" class="wow fadeInRight" data-wow-duration="0.8s"
+                        data-wow-delay="0s">
+                </div>
+
+
+            </div>
+
+            <div class="row text-white mt-5 pt-5 wow fadeIn">
+
+                <div class="col-md-12">
+                    <hr class="mb-5">
+                    <h2>{{threefacts}}</h2>
+                </div>
+            </div>
+
+            <div class="row wow fadeIn">
+                <div class="col-md-4 pt-4 pb-4 pl-4 pr-4"><img :src="itpath" style="width:80%;"
+                        class="d-flex justify-content-center wow fadeInRight" data-wow-duration="1s"
+                        data-wow-delay="0.3s">
+                    <h3 class="text-white pt-4">{{one}}</h3>
+                </div>
+                <div class="col-md-4 pt-4 pb-4 pl-4 pr-4"><img :src="thunderbirdpath"
+                        class="d-flex justify-content-center wow fadeInRight" data-wow-duration="1s"
+                        data-wow-delay="0.4s">
+                    <h3 class="text-white mt-4 pt-4">{{two}}</h3>
+                </div>
+                <div class="col-md-4 pt-4 pb-4 pl-4 pr-4"><img :src="kittypath" style="width:80%;"
+                        class="d-flex justify-content-center wow fadeInRight" data-wow-duration="1s"
+                        data-wow-delay="0.5s">
+                    <h3 class="pt-4 text-white">{{three}}</h3>
+                </div>
+
+            </div>
 
 
         </div>
 
 
-          <div class="auto cell"></div>
+        <!--end content-->
+        <!-- SCRIPTS -->
+        <!-- JQuery -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Bootstrap tooltips -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+        </script>
+        <!-- Bootstrap core JavaScript -->
+        <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <!-- MDB core JavaScript -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.7/js/mdb.min.js">
+        </script>
+        <!--JavaScript -->
+        <script type="text/javascript" src="js/app.js">
+        </script>
+        <script type="text/javascript" src="js/main.js">
+        </script>
 
+        <!-- Initializations -->
+        <script type="text/javascript">
+            new WOW().init();
+        </script>
 
+    </main>
+</body>
 
-
-         <div class="small-12 cell">
-            <div class="small-12 medium-12 large-10 cell">
-
-<center><img :src="itpath" width="15%" class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
-<img :src="thunderbirdpath" width="15%" class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.4s">
-<img :src="kittypath" width="15%" class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s"><BR><Br></center>
-
-<hr>
-
-
-            </div>
-
-         
-
-          <div class="auto cell"></div>
-          </div>
-
-  			</div>
-<!--end about container-->
-
-
-
-
-  	   <!--Footer-->
-       <footer class="grid-x wow fadeInRightBig" data-wow-duration="0.8s" data-wow-delay="-0.3s"><h2 class="hidden">Footer</h2>
-       <div class="footer-container small-auto medium-auto large-auto cell wow fadeIn" data-wow-delay="0.3s" data-wow-duration="8s">
-       © Shadia Ali 2018
-         </div>
-       </footer>
-    <!--End footer-->
-
-     <!--end grid frame--></div>
-
-    <script src="node_modules/jquery/dist/jquery.js"></script>
-    <script src="node_modules/what-input/dist/what-input.js"></script>
-    <script src="node_modules/foundation-sites/dist/js/foundation.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/main.js"></script>
-
-  </body>
 </html>

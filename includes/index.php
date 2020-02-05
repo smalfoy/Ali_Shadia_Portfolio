@@ -10,4 +10,3 @@ else {
     $data = get_all_portfolios($conn);
     echo json_encode($data);
 }
-?>

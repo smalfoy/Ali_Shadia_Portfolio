@@ -1,0 +1,19 @@
+.work-container {
+    background-image: url('https://www.transparenttextures.com/patterns/stardust.png'), linear-gradient(to bottom, #002c3c, #7781bc, #002c3c);
+    margin-top: 100px;
+    background-attachment: fixed;
+    height: 100vh;
+
+}
+
+
+.card {
+    background-color: rgba(226, 225, 250, 0.7) !important;
+
+}
+
+.card:hover {
+    background-color: #efe270 !important;
+    box-shadow: none !important;
+
+}

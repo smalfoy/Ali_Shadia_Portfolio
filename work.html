@@ -1,112 +1,291 @@
-<!doctype html>
-<html class="no-js" lang="en">
-  <head>
+<!DOCTYPE html>
+
+<head>
     <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Work</title>
-    <link rel="stylesheet" href="css/app.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css?family=Homemade+Apple" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Shadia Ursula Ali | Full Stack Web Developer</title>
+    <meta name="description" content="content description">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:600|Merriweather+Sans:300&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.7/css/mdb.min.css" rel="stylesheet">
+    <!-- CSS -->
+    <link href="css/master.css" rel="stylesheet">
+
+    <!--vue-->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
 
 
-  </head>
-<body>
+</head>
 
- <!--start grid-frame--> <div class="grid-container full wow fadeIn" data-wow-duration="0.6s">
-  		<header>
+<body style="background-image: url('https://www.transparenttextures.com/patterns/stardust.png'), linear-gradient(to bottom, #002c3c, #7781bc, #002c3c);
+    padding-top: 5%;
+    background-attachment: fixed;">
+    <main>
+        <!-- Main navigation -->
+        <header>
 
-        <!-- mobile nav bar -->
-      <div class="title-bar topbar-center-logo-mobile topbar-responsive wow fadeIn" data-responsive-toggle="topbar-center-logo" data-hide-for="medium">
-      <div class="title-bar-left">
-        <div class="title-bar-title"><a href="index.html"><img src="images/circle-logo.svg" style="height:39px;"  alt="logo" class="wow fadeIn" data-wow-delay="0.1s" data-wow-duration="6s"></a></div>
-      </div>
-      <div class="title-bar-right">
-        <button class="menu-icon" type="button" data-toggle="topbar-center-logo"></button>
-      </div>
-      </div>
-      <!-- /mobile nav bar -->
-
-      <!-- medium and larger nav bar -->
-      <div class="top-bar topbar-center-logo wow fadeIn" id="topbar-center-logo">
-
-      <div class="top-bar-center">
-        <a href="index.html"><img src="images/circle-logo.svg"  class="wow fadeIn" data-wow-delay="0.1s" data-wow-duration="6s" style="height:55px;" alt="logo"></a>
-      </div>
-      <div class="top-bar-right">
-        <ul class="menu vertical medium-horizontal menu-hover-lines">
-          <li class="wow fadeIn"  data-wow-duration="6s"><a href="index.html">Home</a></li>
-          <li class="wow fadeIn"  data-wow-duration="6s"><a href="about.html">About Me</a></li>
-          <li class="wow fadeIn"  data-wow-duration="6s"><a href="work.html">My Work</a></li>
-          <li class="wow fadeIn"  data-wow-duration="6s"><a href="contact.html">Get in Touch</a></li>
-          </ul>
-      </div>
-      </div>
-      <!-- /medium and larger nav bar -->
-	</header>
-
-
-  <!--content-->
-
-<!--start work container-->
-<div class="grid-x work-container"><h2 class="hidden"> My Work</h2>
-<div class="small-12 cell"><h2 class="work-header wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.1s">My Work</h2><br>
-
-  <center><a href="https://github.com/shadiaali" target="_blank"><i style="color:#efe270" class="fab fa-github about-header wow  rubberBand" data-wow-duration="2.7s" data-wow-delay="0.2s"></i></a>
-    <a href="https://github.com/shadiaali"><p style="color:#fff;" class="wow fadeInRight rubberBand" data-wow-duration="1s" data-wow-delay="0.1s">See my code @ Github</p></a> </center><br>
-    
-</div>
-
-
- 
-
-
-<div class="grid-container full wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.2s">
-  <div class="grid-x wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s" id="app"><h2 class="hidden">App container</h2>
-
-
- <div style="margin-left:8%; margin-right:8%;margin-bottom:1%; margin-top:1%;" class=" small-10 medium-10 large-10 cell" v-for="portfolio in portfoliodata">
-
-   
-   <div class="overlay">
-    <h3 style="color:#efe270; text-align: center;">{{ portfolio.project_title }}</h3><center><a :href="portfolio.project_modal" class="button medium hide-for-medium"><B>View Project</b> </a></center><h4 style="color:#fff; text-align: center"><i>{{ portfolio.project_tagline }}</i></h4>  <br><div class="small-12 cell"><center><a :href="portfolio.project_modal" class="button  show-for-medium" style="margin-bottom:6px;"><B>View Project</b> </a></center></div>
-</div>
-
- </div>
+            <!-- Navbar -->
+            <nav class="wow fadeIn navbar sticky-top navbar-dark navbar-expand-lg" data-wow-duration="2s">
 
 
 
-</div><hr></div>
+                <div data-wow-duration="2s" class="wow fadeIn navbar-collapse collapse dual-nav order-1 order-lg-0 ">
+                    <ul data-wow-duration="2s" class="wow fadeIn navbar-nav mx-auto">
 
+                        <li class="nav-item left text-center">
+                            <a class="noblur wow fadeIn nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item left text-center">
+                            <a class="noblur wow fadeIn nav-link" href="about.html">About</a>
+                        </li>
 
-<!--divider-->
-
-   </div>
-<!--end work container-->
+                    </ul>
+                </div>
+                <a data-wow-duration="2s" href="index.html" class="wow fadeIn navbar-brand mx-auto "><img
+                        class="noblur logo" src="images/circle-logo.svg" alt="Shadia Ali Logo"></a>
+                <div data-wow-duration="2s" class="wow fadeIn navbar-collapse collapse dual-nav order-2">
+                    <ul data-wow-duration="2s" class="wow fadeIn mx-auto nav navbar-nav ml-auto">
+                        <li class="nav-item right text-center">
+                            <a class="noblur wow fadeIn nav-link" href="work.html">My Work</a>
+                        </li>
+                        <li class="wow fadeIn nav-item right text-center">
+                            <a class="noblur nav-link" href="contact.html">Get in Touch</a>
+                        </li>
+                    </ul>
+                </div>
 
 
 
 
+                <div data-wow-duration="2s" class="wow fadeIn navbar-toggler toggle-menu" data-toggle-menu
+                    data-target=".dual-nav" data-toggle="collapse">
 
-  	   <!--Footer-->
-       <footer class="grid-x wow fadeInRightBig" data-wow-duration="0.8s" data-wow-delay="-0.3s"><h2 class="hidden">Footer</h2>
-       <div class="footer-container small-auto medium-auto large-auto cell wow fadeIn" data-wow-delay="0.3s" data-wow-duration="8s">
-       © Shadia Ali 2018
-         </div>
-       </footer>
-    <!--End footer-->
+                    <a><span class="navbar-toggler-icon menu__bar"></span>
+                        <span class="navbar-toggler-icon menu__bar"></span>
+                        <span class="navbar-toggler-icon menu__bar"></span></a>
+                </div>
 
-  <!--end grid frame--></div>
+            </nav>
 
-    <script src="node_modules/jquery/dist/jquery.js"></script>
-    <script src="node_modules/what-input/dist/what-input.js"></script>
-    <script src="node_modules/foundation-sites/dist/js/foundation.js"></script>
+        </header>
+        <!-- /Navbar -->
 
-    <script src="js/app.js"></script>
-    <script src="js/main.js"></script>
 
-  </body>
+        <!--start container-->
+
+
+        <div id="app" class="mt-5 pt-4 container-fluid work-container filter-simple">
+
+            <a class="mt-5 text-center" target="_blank" href="https://github.com/shadiaali">
+                <h2 style="color:#fff;" class="wow fadeInRight rubberBand" data-wow-duration="1s" data-wow-delay="0.1s">
+                    <i style="color:#efe270" class="fab fa-github about-header wow  rubberBand" data-wow-duration="2.7s"
+                        data-wow-delay="0.2s"></i> See my code @ Github</h2>
+            </a>
+
+            <div class="filter text-center mt-5 mb-5">
+                <button style="background-color:rgba(226, 225, 250, 0.7);" class="button filter-simple-button btn "
+                    data-filter="all">All</button>
+
+                <button class="button filter-simple-button btn" style="background-color:#70efd3;" data-filter="prog">In
+                    Progress</button>
+
+                <button style="background-color:#cdef70;" class="button filter-simple-button btn"
+                    data-filter="comp">Completed</button>
+
+                <button style="background-color:rgba(226, 225, 250, 0.7);" class="button filter-simple-button btn "
+                    data-filter="dev">Development</button>
+
+                <button style="background-color:rgba(226, 225, 250, 0.7);" class="button filter-simple-button btn "
+                    data-filter="des">Design</button>
+
+                <button style="background-color:rgba(226, 225, 250, 0.7);" class="button filter-simple-button btn "
+                    data-filter="other">Other</button>
+
+
+            </div>
+
+
+
+            <div class="portfolio">
+                <div class="row">
+
+                    <div v-for="portfolio in portfoliodata" class="wow fadeInRight col-md-4 filter-simple-item"
+                        :class="portfolio.project_type">
+
+
+                        <!-- Card -->
+                        <a class="wow fadeIn my-3 mx-2 card" data-toggle="modal"
+                            :data-target="'#basicExampleModal' + portfolio.gallery_id">
+
+
+                            <!-- Card content -->
+                            <div class="wow fadeIn card-body">
+
+                                <h1 class="text-center mt-3 mb-5">{{portfolio.project_title}}</h1>
+                                <hr>
+                                <h3 class="text-center mb-3">{{portfolio.project_tagline}}</h3>
+                                <hr>
+                                <p class="mb-3 mt-5 text-justify text-uppercase">{{portfolio.project_skills}}</p>
+                            </div>
+
+                        </a>
+                        <!-- Card -->
+
+
+                        <!-- Modal -->
+                        <div class="modal fade" :id="'basicExampleModal' + portfolio.gallery_id" tabindex="-1"
+                            role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"
+                            onclick="document.getElementById('projectvideo').pause();">
+                            <div class="modal-dialog modal-fluid modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-body p-0">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+
+                                        <!-- Grid row -->
+                                        <div class="row d-flex justify-content-center">
+
+                                            <!-- Grid column -->
+                                            <div class="col-lg-6 py-5 pl-5">
+
+                                                <h1 class="text-center font-weight-normal mb-3">
+                                                    {{portfolio.project_title}}</h1>
+                                                <hr class="mb-5">
+
+                                                <p class="text-muted">{{portfolio.project_description}}</p>
+
+                                                <p v-if="portfolio.project_description_2" class="text-muted">
+                                                    {{portfolio.project_description_2}}</p>
+                                                <hr class="mt-5">
+                                                <ul class="list-unstyled font-small mt-5">
+
+                                                    <li>
+                                                        <h3 class=" mb-2"><strong>Client</strong></h3>
+                                                        <h4 class="text-muted mb-4">{{portfolio.project_client}}</h4>
+                                                    </li>
+
+                                                    <li>
+                                                        <h3 class=" mb-2"><strong>My Role</strong></h3>
+                                                        <h4 class="text-muted mb-4">{{portfolio.project_role}}</h4>
+                                                    </li>
+
+                                                    <li>
+                                                        <h3 class=" mb-2"><strong>Skills</strong></h3>
+                                                        <h4 class="text-muted mb-4">{{portfolio.project_skills}}</h4>
+                                                    </li>
+
+                                                    <li v-if="portfolio.project_gitrepo">
+                                                        <h3 class=" mb-2">
+                                                            <strong>Github
+                                                                Repo</strong></h3>
+                                                        <a :href="portfolio.project_gitrepo" target="_blank"
+                                                            alt="link to github repository">
+                                                            <h4>Link to
+                                                                Github Repository</h4>
+                                                        </a>
+                                                    </li>
+
+
+
+                                                    <br>
+                                                    <li v-if="portfolio.project_livesite">
+                                                        <h3 class=" mb-2"><strong>Live Demo</strong></h3>
+                                                        <a :href="portfolio.project_livesite" target="_blank"
+                                                            alt="link to live demo">
+                                                            <h4>Link to
+                                                                live
+                                                                demo</h4>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <!-- Grid column -->
+
+                                            <!-- Grid column -->
+                                            <div class="col-lg-6 mt-5">
+
+                                                <div v-if="portfolio.project_image" class="text-center">
+                                                    <img class="img-fluid" :src="'images/' + portfolio.project_image"
+                                                        alt="project image">
+                                                </div>
+
+                                                <div v-if="portfolio.project_image_2" class="text-center">
+                                                    <br><img class="img-fluid"
+                                                        :src="'images/' + portfolio.project_image_2"
+                                                        alt="project image">
+                                                </div>
+
+                                                <div v-if="portfolio.project_video" class="mt-5">
+                                                    <video class="video-fluid" controls id="projectvideo">
+                                                        <source :src="'images/' + portfolio.project_video"
+                                                            type="video/mp4" />
+                                                    </video>
+
+
+                                                </div>
+
+                                            </div>
+                                            <!-- Grid column -->
+
+                                        </div>
+                                        <!-- Grid row -->
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!--modal-->
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+
+        <!--end content-->
+        <!-- SCRIPTS -->
+        <!-- JQuery -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+        </script>
+
+        <!-- Bootstrap tooltips -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+        </script>
+        <!-- Bootstrap core JavaScript -->
+        <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <!-- MDB core JavaScript -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.7/js/mdb.min.js">
+        </script>
+
+        <!--JavaScript -->
+
+        <script type="text/javascript" src="js/main.js">
+        </script>
+        <script type="text/javascript" src="js/app.js">
+        </script>
+        <script type="text/javascript" src="js/filter.js"></script>
+
+
+        <!-- Initializations -->
+        <script type="text/javascript">
+            new WOW().init();
+        </script>
+
+    </main>
+</body>
+
 </html>

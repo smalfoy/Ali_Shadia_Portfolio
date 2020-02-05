@@ -1,135 +1,196 @@
-<!doctype html>
-<html class="no-js" lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Me</title>
-      <link rel="stylesheet" href="css/app.css">
-      <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" rel="stylesheet">
-    	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
-    	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<!DOCTYPE html>
 
-      <script>
-        function _(id){ return document.getElementById(id); }
-        function submitForm(){
-          _("mybtn").disabled = true;
-          _("status").innerHTML = 'please wait ...';
-          var formdata = new FormData();
-          formdata.append( "n", _("n").value );
-          formdata.append( "e", _("e").value );
-          formdata.append( "m", _("m").value );
-          var ajax = new XMLHttpRequest();
-          ajax.open( "POST", "example_parser.php" );
-          ajax.onreadystatechange = function() {
-            if(ajax.readyState == 4 && ajax.status == 200) {
-              if(ajax.responseText == "success"){
-                _("my_form").innerHTML = '<center><div style="background-color:rgba(255,255,255, 0.4);" class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.1s"><h3 style="color:#efe270;">Thanks for reaching out, '+_("n").value+'! <br>Your email has been sent. <br>I will do my best to get back to you within 48 hours.</h3></div></center>';
-              } else {
-                _("status").innerHTML = ajax.responseText;
-                _("mybtn").disabled = false;
-              }
-            }
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Shadia Ursula Ali | Full Stack Web Developer</title>
+  <meta name="description" content="content description">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:600|Merriweather+Sans:300&display=swap"
+    rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.7/css/mdb.min.css" rel="stylesheet">
+  <!-- CSS -->
+  <link href="css/master.css" rel="stylesheet">
+
+  <!--vue-->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+
+  <script>
+    function _(id) {
+      return document.getElementById(id);
+    }
+
+    function submitForm() {
+      _("mybtn").disabled = true;
+      _("status").innerHTML = 'please wait ...';
+      var formdata = new FormData();
+      formdata.append("n", _("n").value);
+      formdata.append("e", _("e").value);
+      formdata.append("m", _("m").value);
+      var ajax = new XMLHttpRequest();
+      ajax.open("POST", "example_parser.php");
+      ajax.onreadystatechange = function () {
+        if (ajax.readyState == 4 && ajax.status == 200) {
+          if (ajax.responseText == "success") {
+            _("my_form").innerHTML =
+              '<center><div class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.1s"><h3 style="color:#efe270;">Thanks for reaching out, ' +
+              _("n").value +
+              '! <br>Your email has been sent. <br>I will do my best to get back to you within 48 hours.</h3></div></center>';
+          } else {
+            _("status").innerHTML = ajax.responseText;
+            _("mybtn").disabled = false;
           }
-          ajax.send( formdata );
         }
-        </script>
+      }
+      ajax.send(formdata);
+    }
+  </script>
 
-  </head>
+</head>
+
+<body class="test">
+  <main>
+    <!-- Main navigation -->
+    <header>
+
+      <!-- Navbar -->
+      <nav class="wow fadeIn navbar sticky-top navbar-dark navbar-expand-lg" data-wow-duration="2s">
 
 
-    <!--start grid-frame-->
-  		<header>
 
-        <!-- mobile nav bar -->
-      <div class="title-bar topbar-center-logo-mobile topbar-responsive wow fadeIn" data-responsive-toggle="topbar-center-logo" data-hide-for="medium">
-      <div class="title-bar-left">
-        <div class="title-bar-title"><a href="index.html"><img src="images/circle-logo.svg" style="height:39px;"  alt="logo" class="wow fadeIn" data-wow-delay="0.1s" data-wow-duration="6s"></a></div>
-      </div>
-      <div class="title-bar-right">
-        <button class="menu-icon" type="button" data-toggle="topbar-center-logo"></button>
-      </div>
-      </div>
-      <!-- /mobile nav bar -->
+        <div data-wow-duration="2s" class="wow fadeIn navbar-collapse collapse dual-nav order-1 order-lg-0 ">
+          <ul data-wow-duration="2s" class="wow fadeIn navbar-nav mx-auto">
 
-      <!-- medium and larger nav bar -->
-      <div class="top-bar topbar-center-logo wow fadeIn" id="topbar-center-logo">
+            <li class="nav-item left text-center">
+              <a class="noblur wow fadeIn nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item left text-center">
+              <a class="noblur wow fadeIn nav-link" href="about.html">About</a>
+            </li>
 
-      <div class="top-bar-center">
-        <a href="index.html"><img src="images/circle-logo.svg"  class="wow fadeIn" data-wow-delay="0.1s" data-wow-duration="6s" style="height:55px;" alt="logo"></a>
-      </div>
-      <div class="top-bar-right">
-        <ul class="menu vertical medium-horizontal menu-hover-lines">
-          <li class="wow fadeIn"  data-wow-duration="6s"><a href="index.html">Home</a></li>
-          <li class="wow fadeIn"  data-wow-duration="6s"><a href="about.html">About Me</a></li>
-          <li class="wow fadeIn"  data-wow-duration="6s"><a href="work.html">My Work</a></li>
-          <li class="wow fadeIn"  data-wow-duration="6s"><a href="contact.html">Get in Touch</a></li>
           </ul>
+        </div>
+        <a data-wow-duration="2s" href="index.html" class="wow fadeIn navbar-brand mx-auto "><img class="noblur logo"
+            src="images/circle-logo.svg" alt="Shadia Ali Logo"></a>
+        <div data-wow-duration="2s" class="wow fadeIn navbar-collapse collapse dual-nav order-2">
+          <ul data-wow-duration="2s" class="wow fadeIn mx-auto nav navbar-nav ml-auto">
+            <li class="nav-item right text-center">
+              <a class="noblur wow fadeIn nav-link" href="work.html">My Work</a>
+            </li>
+            <li class="wow fadeIn nav-item right text-center">
+              <a class="noblur nav-link" href="contact.html">Get in Touch</a>
+            </li>
+          </ul>
+        </div>
+
+
+
+
+        <div data-wow-duration="2s" class="wow fadeIn navbar-toggler toggle-menu" data-toggle-menu
+          data-target=".dual-nav" data-toggle="collapse">
+
+          <a><span class="navbar-toggler-icon menu__bar"></span>
+            <span class="navbar-toggler-icon menu__bar"></span>
+            <span class="navbar-toggler-icon menu__bar"></span></a>
+        </div>
+
+      </nav>
+
+    </header>
+    <!-- /Navbar -->
+
+
+    <!--start container-->
+    <div id="app" class="mt-5 pt-4 container">
+      <div class="row mt-5 mb-5">
+        <div class="col-6 text-center">
+          <a href="https://www.linkedin.com/in/shadiaali/" target="_blank">
+            <h3 style="color:#fff; margin-top:6px;" class="wow rubberBand" data-wow-duration="3s" data-wow-delay="0.1s">
+              <i style="color:#efe270" class="fab fa-linkedin about-header wow rubberBand" data-wow-duration="2.5s"
+                data-wow-delay="0.1s"></i> My LinkedIn</h3>
+          </a>
+        </div>
+
+        <div class="col-6 text-center">
+          <a href="images/shadia-resume-2020.pdf" target="_blank">
+            <h3 style="color:#fff; margin-top:6px;" class="wow rubberBand" data-wow-duration="3s" data-wow-delay="0.1s">
+              <i style="color:#efe270" class="fas fa-briefcase about-header wow rubberBand" data-wow-duration="2.5s"
+                data-wow-delay="0.1s"></i> My Resume</h3>
+          </a>
+        </div>
       </div>
+
+      <div class="row pt-4 pb-4 mt-5 mb-5">
+        <div class="col-12">
+          <h3 style="color:#fff; margin-top:6px;" class="wow rubberBand" data-wow-duration="3s" data-wow-delay="0.1s">
+            You can contact me through the form below, or by emailing <b style="color:#efe270">shadia@shadiaali.ca</b>
+          </h3>
+        </div>
       </div>
-      <!-- /medium and larger nav bar -->
-	</header>
 
-<div class="grid-container full wow fadeIn" data-wow-duration="0.6s" id="app">
-  <!--content-->
-
-<!--start contact container-->
-  		<div class="contact-container small-10 medium-10 large-10 cell  wow fadeInRight" data-wow-duration="0.9s" data-wow-delay="0.2s" ><h2 class="hidden">Contact Me</h2>
-
-
-          <h2 class="about-header wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.1s">Contact Me</h2> <br>
-
-<div class="grid-x" style="margin-left:15%;">
-          <div class="small-5 cell"><center><a href="https://www.linkedin.com/in/shadiaali/" target="_blank"><i style="color:#efe270" class="fab fa-linkedin about-header wow rubberBand" data-wow-duration="2.5s" data-wow-delay="0.1s"></i>
-  <h3 style="color:#fff; margin-top:6px;" class="wow rubberBand" data-wow-duration="3s" data-wow-delay="0.1s">My LinkedIn</h3></a></center></div>
-
-  <div class="small-5 cell"><center><a href="images/Shadia-Ali-Resume-2019-min.pdf" target="_blank"><i style="color:#efe270" class="fas fa-briefcase about-header wow rubberBand" data-wow-duration="2.5s" data-wow-delay="0.1s"></i>
-    <h3 style="color:#fff; margin-top:6px;" class="wow rubberBand" data-wow-duration="3s" data-wow-delay="0.1s">My Resume</h3></a></center></div>
-</div>
-  
-<br>
-
-<hr>
-<center><h3 style="color:#fff; margin-top:6px;" class="wow rubberBand" data-wow-duration="3s" data-wow-delay="0.1s">You can contact me through the form below, or by emailing <b>shadia@shadiaali.ca</b></h3></center>
-
-<form style="margin-left:10%; margin-right:10%;margin-bottom:5%;margin-top:2%;" id="my_form" method="post" onsubmit="submitForm(); return false;">
-
-  <input id="n" name="name" type="text" class="form-control" placeholder="Your name" required>
-  <br>
-  <input id="e" name="email" type="email" required class="form-control" placeholder="Your email address" required>
-  <br>
-  <textarea id="m" name="message" required class="form-control" placeholder="Your Message" rows="6" required></textarea>
-  <br>
-  <input id="mybtn"type="submit" class="form-control submit" value="SEND MESSAGE" > <span id="status"></span>
-</form>
-
-
-</div>
-
-
-
-</div>
-<!--end contact container-->
+      <div class="form-group wow fadeInRight md-form md-bg form-lg">
+        <form id="my_form" method="post" onsubmit="submitForm(); return false;">
 
 
 
 
+          <div class="form-group">
 
-  	   <!--Footer-->
-       <footer class="grid-x wow fadeInRightBig" data-wow-duration="0.8s" data-wow-delay="-0.3s"><h2 class="hidden">Footer</h2>
-       <div class="footer-container small-auto medium-auto large-auto cell wow fadeIn" data-wow-delay="0.3s" data-wow-duration="8s">
-       © Shadia Ali 2018
-         </div>
-       </footer>
-    <!--End footer-->
+            <input type="text" required name="name" id="n" class="form-control" placeholder="Your Name">
+          </div>
+          <div class="form-group">
+            <input type="email" id="e" name="email" class="form-control" required placeholder="Your Email Address">
+          </div>
 
-     <!--end grid frame--></div>
 
-    <script src="node_modules/jquery/dist/jquery.js"></script>
-    <script src="node_modules/what-input/dist/what-input.js"></script>
-    <script src="node_modules/foundation-sites/dist/js/foundation.js"></script>
-    <script src="js/app.js"></script>
-    
+          <div class="form-group">
+            <textarea type="text" name="message" id="m" class="md-textarea form-control" placeholder="Your Message"
+              required rows="2"></textarea>
+          </div>
 
-  </body>
+          <button type="submit" name="submit" style="background-color:#efe270;" class=" submit btn"
+            id="mybtn">Submit</button><span id="status"></span>
+        </form>
+      </div>
+
+    </div>
+
+    <!--end content-->
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+    </script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.7/js/mdb.min.js">
+    </script>
+
+    <!--JavaScript -->
+
+    <script type="text/javascript" src="js/main.js">
+    </script>
+    <script type="text/javascript" src="js/app.js">
+    </script>
+
+
+    <!-- Initializations -->
+    <script type="text/javascript">
+      new WOW().init();
+    </script>
+
+  </main>
+</body>
+
 </html>
