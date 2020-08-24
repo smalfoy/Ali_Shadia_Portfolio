@@ -1,192 +1,53 @@
 .navbar {
-    background-color: $darkBlue !important;
-    padding: 0 !important;
-    font-family: $bodyFont;
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    width: 100%;
+    background: #0a192d;
     box-shadow: none !important;
+    font-family: "Varela Round"; 
+}
 
+.navbar li {
+    padding-left: 15px;
+    padding-right: 15px; 
+}
 
+.navbar:not(.top-nav-collapse) {
+    background: #0a192d; 
 }
 
 
-
-.navbar.scrolled {
-    transition: background-color 200ms linear;
-    background-color: $darkBlue !important;
-}
-
-
-
-
-
-
-.logo {
-    height: 3.8em;
-    padding-bottom: 0.1em;
-
-}
-
-.toggle-menu {
-    display: block;
-    position: relative;
-    margin: -10%;
-    margin-right: 3em;
-    margin-top: -10%;
-    width: 2rem;
-    height: 1.5rem;
-    text-indent: -999em;
-    cursor: pointer;
-}
-
-.toggle-menu--clicked .menu__bar:nth-child(1) {
-    top: 1.25rem;
-    transform: rotate(45deg);
-}
-
-.toggle-menu--clicked .menu__bar:nth-child(2) {
-    transform: translateX(100%) scale(0);
-}
-
-.toggle-menu--clicked .menu__bar:nth-child(3) {
-    top: 1.25rem;
-    transform: rotate(-45deg);
-}
-
-.menu__bar {
-    display: block;
-    position: absolute;
-    left: 0;
-    //width: 5rem;
-    height: 0.3rem;
-    transition: top 0.4s ease-out, transform 0.4s ease-out;
-    background-color: rgb(255, 255, 255);
-}
-
-.menu__bar:nth-child(1) {
+.overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    display: none;
+    z-index: 1000;
     top: 0;
-    //border-radius: 50px;
+    left: 0;
+    background-color: #0a192d;
+    -webkit-transition: 0.1s;
+    transition: 0.1s; 
 }
 
-.menu__bar:nth-child(2) {
-    top: 1rem;
-    //border-radius: 50px;
-}
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px; }
 
-.menu__bar:nth-child(3) {
-    top: 2rem;
-    //border-radius: 50px;
-}
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #FFFFFF;
+    display: block;
+    -webkit-transition: 0.8s;
+    transition: 0.8s;
+    font-weight: 500; }
 
-li {
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 5px;
-    font-size: 1em;
-}
+.overlay a:hover,
+.overlay a:focus {
+    color: #009f4f; }
 
-body {
-
-    -webkit-animation: fadein 2s;
-    /* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: fadein 2s;
-    /* Firefox < 16 */
-    -ms-animation: fadein 2s;
-    /* Internet Explorer */
-    -o-animation: fadein 2s;
-    /* Opera < 12.1 */
-    animation: fadein 2s;
-}
-
-@keyframes fadein {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-/* Firefox < 16 */
-@-moz-keyframes fadein {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes fadein {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-/* Internet Explorer */
-@-ms-keyframes fadein {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-/* Opera < 12.1 */
-@-o-keyframes fadein {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-/*Media Queries*/
-
-/*small up sizes*/
-
-@media (min-width: 576px) {
-    /*small up*/
-}
-
-/*med up sizes*/
-
-@media (min-width: 768px) {}
-
-/*large up sizes*/
-
-@media (min-width: 992px) {
-
-    .navbar {
-        background-color: transparent !important;
-        padding: 0 !important;
-        font-family: $bodyFont;
-        overflow: hidden;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        box-shadow: none !important;
-
-
-    }
-
-
-
-    .navbar.scrolled {
-        transition: background-color 200ms linear;
-        background-color: $darkBlue !important;
-    }
-}
+.overlay .closebtn {
+    position: absolute;
+    right: 32px; }
