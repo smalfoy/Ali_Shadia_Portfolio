@@ -1,0 +1,41 @@
+a {
+    color: #086080 !important;
+}
+
+a:hover {
+    color: #efe270 !important;
+}
+
+body {
+    font-family: $bodyFont !important;
+}
+
+h1 {
+    font-family: $headerFont;
+    
+}
+
+h2 {
+    font-family: $headerFont;
+    text-transform: lowercase;
+}
+
+h3 {
+    font-family: $headerFont;
+    text-transform: lowercase;
+}
+
+h4 {
+    font-family: $bodyFont;
+
+}
+
+h5 {
+    font-family: $bodyFont;
+
+}
+
+p {
+    font-family: $bodyFont;
+}
+

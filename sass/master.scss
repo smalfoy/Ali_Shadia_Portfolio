@@ -1,24 +1,31 @@
 @import '_vars';
 @import 'modules/_imports';
+@import 'modules/_type';
 @import 'modules/_nav';
 @import 'modules/_landing';
-@import 'modules/_about';
-@import 'modules/_work';
-@import 'modules/_contact';
+
 
 
 
 html {
     height: 100% !important;
+    //position: relative; 
+    //width: 100%; 
+    //overflow: hidden;
 }
 
 body {
     min-height: 100% !important;
-    font-family: $bodyFont;
-
+    background-color: $dark-grey;
+    //position: relative; 
+    height: 100%; 
+    //width: 100%; 
+    overflow-x: hidden;
 }
 
-
+.hidden{
+    display:none;
+}
 
 .boxHelper {
     height: 100%;
@@ -58,39 +65,3 @@ hr {
     border-top: 1px solid #efe270 !important;
 }
 
-h1 {
-    font-family: $headerFont;
-}
-
-h2 {
-    font-family: $headerFont;
-
-}
-
-h3 {
-    font-family: $bodyFont;
-
-}
-
-h4 {
-    font-family: $bodyFont;
-
-}
-
-h5 {
-    font-family: $bodyFont;
-    line-height: 1.4em;
-
-}
-
-p {
-    font-family: $bodyFont;
-}
-
-a {
-    color: #086080;
-}
-
-a:hover {
-    color: #efe270;
-}
