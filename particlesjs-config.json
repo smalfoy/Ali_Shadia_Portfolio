@@ -21,7 +21,7 @@
       }
     },
     "opacity": {
-      "value": 0.8,
+      "value": 0.9,
       "random": true,
       "anim": {
         "enable": true,
@@ -83,7 +83,7 @@
         }
       },
       "bubble": {
-        "distance": 250,
+        "distance": 150,
         "size": 0,
         "duration": 2,
         "opacity": 0,

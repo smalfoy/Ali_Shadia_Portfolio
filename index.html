@@ -17,7 +17,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
   <!-- CSS -->
   <link href="css/master.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js" SameSite=None secure></script>
 </head>
 
 <body>
@@ -39,26 +39,26 @@
         <div id="myNav" class="overlay">
           <a href="javascript:void(0)" class="closebtn" id="closeNav">x</a>
           <div class="overlay-content">
-            <a href="index.html">Home</a>
-            <a href="index.html">Home</a>
-            <a href="index.html">Home</a>
-            <a href="index.html">Home</a>
+            <a href="index.html" alt="">Home</a>
+            <a href="index.html" alt="">Home</a>
+            <a href="index.html" alt="">Home</a>
+            <a href="index.html" alt="">Home</a>
           </div>
         </div>
 
         <div class="collapse navbar-collapse mx-auto" id="navbarTogglerDemo02">
       <ul class="navbar-nav ml-auto smooth-scroll">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link" href="index.html" alt="">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link" href="index.html" alt="">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link" href="index.html" alt="">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link" href="index.html" alt="">Home</a>
             </li>
           </ul>
         </div>
@@ -93,10 +93,23 @@
 
 
   <!--Start About Me-->
-<section class="about-section boxHelper">
-  <div class="jumbotron">hi</div>
-  <h2>About Me</h2>
-waht<h1>hi</h1>
+<section class="about-section">
+  <h2 class="hidden">About Me</h2>
+
+  <div class="container about-container">
+    <div class="row">
+      <div class="col-auto section-heading"><h1 class="pt-2 display-4">About Me</h1></div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-12">
+        <p>six and twelve</p>
+      </div>
+      <div class="col-md-6 col-12">
+        six and twelve
+      </div>
+    </div>
+  </div>
+
 </section>
 <!--End About Me-->
 

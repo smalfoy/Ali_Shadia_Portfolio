@@ -1,7 +1,6 @@
 .about-container {
-    background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png'),linear-gradient(to bottom, #002c3c, #0e607c, #1b6d88, #277c94, #348a9f, #002c3c);
-    padding-top: 5%;
-    background-attachment: fixed;
-
-
+background-color: $dark-grey !important;
+height: 100vh;
+margin-top:1em;
+margin-bottom: 1em;
 }

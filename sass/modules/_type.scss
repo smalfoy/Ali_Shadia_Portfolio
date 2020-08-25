@@ -1,3 +1,12 @@
+.section-heading{
+    background-image: url("../images/rainbowbg.png");
+    overflow:clip;
+    text-align:left;
+    margin-top:1em;
+    margin-bottom:0.8em;
+    
+}
+
 a {
     color: #086080 !important;
 }
@@ -8,34 +17,44 @@ a:hover {
 
 body {
     font-family: $bodyFont !important;
+    color: $white-text;
+    
 }
 
 h1 {
     font-family: $headerFont;
+    color: $white-text;
     
 }
 
 h2 {
     font-family: $headerFont;
     text-transform: lowercase;
+    color: $white-text;
 }
 
 h3 {
     font-family: $headerFont;
     text-transform: lowercase;
+    color: $white-text;
 }
 
 h4 {
     font-family: $bodyFont;
+    color: $white-text;
 
 }
 
 h5 {
     font-family: $bodyFont;
+    color: $white-text;
 
 }
 
 p {
     font-family: $bodyFont;
+    color: $white-text;
+    font-size:1.4em !important;
+    text-align:left;
 }
 
