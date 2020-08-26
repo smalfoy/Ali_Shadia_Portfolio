@@ -1,19 +1,50 @@
-.work-container {
-    background-image: url('https://www.transparenttextures.com/patterns/stardust.png'), linear-gradient(to bottom, #002c3c, #7781bc, #002c3c);
-    margin-top: 100px;
-    background-attachment: fixed;
-    height: 100vh;
+.projects-container {
+    background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+    //margin-top: 100px;
+    //background-attachment: fixed;
+    //height: 100vh;
 
 }
 
 
+
 .card {
-    background-color: rgba(226, 225, 250, 0.7) !important;
+    background-color: $dark-grey !important;
+    min-width:300px;
+    height:350px !important;
+    overflow:hidden;
+    max-width:100%;
+    background-image: url("../images/rainbowbg.png");
+
 
 }
 
 .card:hover {
-    background-color: #efe270 !important;
-    box-shadow: none !important;
+    background-image: url("../images/rainbowbg-hover.png");
+    box-shadow: none !important
 
+}
+
+
+.saturate img {
+    -webkit-transition: all 2s ease;
+    -moz-transition: all 2s ease;
+        -o-transition: all 2s ease;
+        -ms-transition: all 2s ease;
+            transition: all 2s ease;
+    width:100%;
+    max-height:300px;
+    filter: saturate(1) contrast(100%) hue-rotate(0deg);
+    -webkit-filter: saturate(1) contrast(100%) hue-rotate(0deg);
+    
+}
+
+.saturate a:hover img{
+    -webkit-transition: all 2s ease;
+    -moz-transition: all 2s ease;
+        -o-transition: all 2s ease;
+        -ms-transition: all 2s ease;
+            transition: all 2s ease;
+filter: saturate(1.2) contrast(107%) hue-rotate(11deg);
+-webkit-filter: saturate(1.2) contrast(107%) hue-rotate(11deg);
 }
