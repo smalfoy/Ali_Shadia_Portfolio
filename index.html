@@ -13,6 +13,8 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" SameSite=None secure>
   <!-- Material Design Bootstrap -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet" SameSite=None secure>
+  <!-- AOS CSS-->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- CSS -->
   <link href="css/master.css" rel="stylesheet">
   <!-- Particles -->
@@ -72,7 +74,7 @@
         <div id="myNav" class="overlay">
           <a href="javascript:void(0)" class="closebtn" id="closeNav">x</a>
           <div class="overlay-content">
-            <a href="index.html" alt="">Home</a>
+            <a href="#test" alt="">Home</a>
             <a href="index.html" alt="">Home</a>
             <a href="index.html" alt="">Home</a>
             <a href="index.html" alt="">Home</a>
@@ -82,7 +84,7 @@
         <div class="collapse navbar-collapse mx-auto" id="navbarTogglerDemo02">
       <ul class="navbar-nav ml-auto smooth-scroll">
             <li class="nav-item">
-              <a class="nav-link" href="index.html" alt=""><h3>about</h3></a>
+              <a class="nav-link" href="index.html##test" alt=""><h3>about</h3></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="index.html" alt=""><h3>skills</h3></a>
@@ -108,8 +110,10 @@
     <div class="container-fluid paral" id="particles-js">
       
       <div class="name">
-        <h1 class="largetext"><span style="color:#fbf09b">s</span>hadia <span style="color:#fbf09b">A</span>li</h1>
-        <h2 class="smalltext">Interactive Media Specialist</h2></div>
+        <h1 class="largetext" data-aos="fade-up"
+        data-aos-duration="3000"><span style="color:#fbf09b">s</span>hadia <span style="color:#fbf09b" >A</span>li</h1>
+        <h2 class="smalltext" data-aos="fade-up"
+        data-aos-duration="3000">Interactive Media Specialist</h2></div>
     
 </div>
   
@@ -131,9 +135,9 @@
 
   <div class="container about-container">
     <div class="row">
-      <div class="col-auto section-heading"><h1 class="pt-2 display-4"><span style="color:#fbf09b">A</span>bout <span style="color:#fbf09b">M</span>e</h1></div>
+      <div data-aos="fade" data-aos-duration="500" data-aos-easing="linear" class="col-auto section-heading"><h1 class="pt-2 display-4"><span style="color:#fbf09b">A</span>bout <span style="color:#fbf09b">M</span>e</h1></div>
     </div>
-    <div class="row">
+    <div class="row" data-aos="fade" data-aos-duration="500" data-aos-easing="linear">
       <div class="col-md-6 col-12 pr-4">
         <p>Boozhoo! Nice to meet you! My name is Shadia Ursula. I am a full stack Interactive Media Specialist with a solid educational and real-world foundation in web development, digital marketing, branding, design and ux/ui. I am passionate about bringing ideas to life — from conceptualization to creation. </p>
 
@@ -164,31 +168,16 @@
                     </button>
                   </div>
                   <div class="modal-body">
-                    body
+                    <span>I'm the Founder, full stack developer & account/project coordinator of NGTC - a collective of new grads serving their community by volunteerism through tech.</span><br><br>
+
+                    <span>NGTC is a pro-bono, volunteer based freelance collective. Members of NGTC donate their time and skills to non-profits, businesses and individuals in order to give back to the community, as well as gain experience in this difficult job market. Members of NGTC have graduated from programs in the Interactive Media/Graphic design cluster, and are trained and adept at digital media and multimedia production; this includes web development (app development, project management and digital communications, concept and planning, back-end and front-end), branding and identity, layout and design, and content creation.</span><br><br>
+                    <span>Our website, ngtc.tech is currently in development and coming soon!</span>
+
                   </div>
                 </div>
               </div>
             </div></li>
-            <li><span style="color:#fbf09b; font-family:'Major Mono Display', monospace;">A</span>&nbsp; Supporting <!-- Button trigger modal -->
-              <a href="#" data-toggle="modal" data-target="#animalsModalPopovers">
-                <span style="color:#fbf09b; font-family:'Major Mono Display', monospace">animal welfare</span> causes
-              </a>
-              
-              <div id="animalsModalPopovers" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="animalsModalPopoversLabel">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h1 class="modal-title section-heading" id="animalsModalPopoversLabel"><span style="color:#fbf09b">a</span>nimals</h1>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                      </button>
-                    </div>
-                    <div class="modal-body">
-                      animal welfare body
-                    </div>
-                  </div>
-                </div>
-              </div></li>
+            
           <li><span style="color:#fbf09b; font-family:'Major Mono Display', monospace;">A</span>&nbsp; Watching  <!-- Button trigger modal -->
             <a href="#" data-toggle="modal" data-target="#movieModalPopovers">
               <span style="color:#fbf09b; font-family:'Major Mono Display', monospace">horror</span> films
@@ -204,7 +193,7 @@
                     </button>
                   </div>
                   <div class="modal-body">
-                    m body
+                    <span>I'm a fan of all things spooky - from the celebration of Halloween to being obsessed with black cats. My favourite scary movies are the Evil Dead franchise (Bruce Campbell is my hero), Night of the Living Dead/Return of the Living Dead series and the Nightmare on Elm Street films.</span><br><br> 
                   </div>
                 </div>
               </div>
@@ -224,51 +213,12 @@
                       </button>
                     </div>
                     <div class="modal-body">
-                      games body
+                      <span>Currently, I am playing as Ash in Dead by Daylight, modding my sims in The Sims 4, and finishing up with South Park: Fractured but Whole</span><br><br> 
                     </div>
                   </div>
                 </div>
               </div></li>
-              <li><span style="color:#fbf09b; font-family:'Major Mono Display', monospace;">A</span>&nbsp; <!-- Button trigger modal -->
-                <a href="#" data-toggle="modal" data-target="#readingModalPopovers">
-                  <span style="color:#fbf09b; font-family:'Major Mono Display', monospace">Reading</span> 
-                </a>books
-                
-                <div id="readingModalPopovers" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="readingModalPopoversLabel">
-                  <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h1 class="modal-title section-heading" id="readingModalPopoversLabel"><span style="color:#fbf09b">r</span>eading</h1>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">×</span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                        book body
-                      </div>
-                    </div>
-                  </div>
-                </div></li>
-                <li><span style="color:#fbf09b; font-family:'Major Mono Display', monospace;">A</span>&nbsp;  Cooking Lebanese<!-- Button trigger modal -->
-                  <a href="#" data-toggle="modal" data-target="#foodModalPopovers">
-                    <span style="color:#fbf09b; font-family:'Major Mono Display', monospace">food</span> 
-                  </a>
-                  
-                  <div id="foodModalPopovers" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="foodModalPopoversLabel">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h1 class="modal-title section-heading" id="foodModalPopoversLabel"><span style="color:#fbf09b">f</span>ood</h1>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">×</span>
-                          </button>
-                        </div>
-                        <div class="modal-body">
-                          food body
-                        </div>
-                      </div>
-                    </div>
-                  </div></li>
+              
                   <li><span style="color:#fbf09b; font-family:'Major Mono Display', monospace;">A</span>&nbsp;  Hanging out with my <!-- Button trigger modal -->
                     <a href="#" data-toggle="modal" data-target="#petsModalPopovers">
                       <span style="color:#fbf09b; font-family:'Major Mono Display', monospace">favourite boys</span> 
@@ -284,31 +234,13 @@
                             </button>
                           </div>
                           <div class="modal-body">
-                            pets body
+                            <img src="images/romeo.jpg" style="width:100%">
+                            <img src="images/ninja_luci.gif" style="width:100%">
                           </div>
                         </div>
                       </div>
                     </div></li>
-                    <li><span style="color:#fbf09b; font-family:'Major Mono Display', monospace;">A</span>&nbsp;  <!-- Button trigger modal -->
-                      <a href="#" data-toggle="modal" data-target="#learningModalPopovers">
-                        <span style="color:#fbf09b; font-family:'Major Mono Display', monospace">learning</span>
-                      </a> new things
-                      
-                      <div id="learningModalPopovers" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="learningModalPopoversLabel">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h1 class="modal-title section-heading" id="learningModalPopoversLabel"><span style="color:#fbf09b">l</span>earning</h1>
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">×</span>
-                              </button>
-                            </div>
-                            <div class="modal-body">
-                              learning body
-                            </div>
-                          </div>
-                        </div>
-                      </div></li>
+                    
         </ul></p>
         
 
@@ -324,11 +256,12 @@
 
 
 <!--Start Skills-->
-<section class="skills-section skills-container container-fluid">
+<section class="skills-section skills-container container-fluid" data-aos="fade">
   <h2 class="hidden">My Skills and Tools</h2>
+  <a name="#test"></a>
   <div class="container">
     <div class="row mt-5">
-      <div class="col-auto section-heading"><h1 class="pt-2 display-4"><span style="color:#fbf09b">s</span>kills + <span style="color:#fbf09b">t</span>ools</h1></div>
+      <div data-aos="fade" data-aos-duration="500" data-aos-easing="linear" class="col-auto section-heading"><h1 class="pt-2 display-4"><span style="color:#fbf09b">s</span>kills + <span style="color:#fbf09b">t</span>ools</h1></div>
     </div>
   
 </div>
@@ -344,7 +277,7 @@
   <h2 class="hidden">Project Gallery</h2>
   <div class="container">
     <div class="row mt-5">
-      <div class="col-auto section-heading"><h1 class="pt-2 display-4"><span style="color:#fbf09b">A</span> <span style="color:#fbf09b">f</span>ew <span style="color:#fbf09b">p</span>rojects</h1></div>
+      <div data-aos="fade" data-aos-easing="linear" data-aos-duration="500" class="col-auto section-heading"><h1 class="pt-2 display-4"><span style="color:#fbf09b">A</span> <span style="color:#fbf09b">f</span>ew <span style="color:#fbf09b">p</span>rojects</h1></div>
     </div>
   
 </div>
@@ -352,12 +285,11 @@
   <div class="mt-4 container-fluid">
 
     <a class="text-center" target="_blank" href="https://github.com/shadiaali">
-        <h2 style="color:#fff;" class="mb-5">
-            <i style="color:#fbf09b" class="fab fa-github about-header wow  rubberBand" data-wow-duration="2.7s"
-                data-wow-delay="0.2s"></i> See my code @ Github</h2>
+        <h2 style="color:#fff;" class="mb-5" data-aos="fade" data-aos-duration="500" data-aos-easing="linear">
+            <i style="color:#fbf09b" class="fab fa-github about-header"></i> See my code @ Github</h2>
     </a>
 
-<!--Zoom effect-->
+
 
 
     <div id="app" class="portfolio">
@@ -375,7 +307,7 @@
                       <h3 class="text-center">{{portfolio.project_title}}</h3>
                       
                   </div>
-                  <div class="card-image">
+                  <div class="card-image" >
                     <img :src="'images/' + portfolio.project_thumb">
                   </div>
                 
@@ -506,43 +438,41 @@
 
 
 <!--Start contact me-->
-<section class="contact-section">
+<section class="contact-section mt-5 wow fadeIn">
   <h2 class="hidden">Contact Me</h2>
-  <div class="container">
+  <div class="container" data-aos="fade" data-aos-duration="500" data-aos-easing="linear">
     <div class="row mt-5">
-      <div class="col-auto section-heading"><h1 class="pt-2 display-4"><span style="color:#fbf09b">G</span>et <span style="color:#fbf09b">i</span>n <span style="color:#fbf09b">t</span>ouch</h1></div>
+      <div data-aos="fade" data-aos-duration="1000" data-aos-easing="linear" class="col-auto section-heading"><h1 class="pt-2 display-4"><span style="color:#fbf09b">G</span>et <span style="color:#fbf09b">i</span>n <span style="color:#fbf09b">t</span>ouch</h1></div>
     </div>
   
 </div>
 
-  <div class="container">
+  <div class="container" data-aos="fade" data-aos-duration="700" data-aos-easing="linear">
     <div class="row mt-5 mb-5">
       <div class="col-6 text-center">
         <a href="https://www.linkedin.com/in/shadiaali/" target="_blank">
-          <h3 style="color:#fff; margin-top:6px;" class="wow rubberBand" data-wow-duration="3s" data-wow-delay="0.1s">
-            <i style="color:#fbf09b" class="fab fa-linkedin about-header wow rubberBand" data-wow-duration="2.5s"
-              data-wow-delay="0.1s"></i> My LinkedIn</h3>
+          <h3 style="color:#fff; margin-top:6px;">
+            <i style="color:#fbf09b" class="fab fa-linkedin about-header" data-aos="fade" data-aos-duration="700" data-aos-easing="linear"></i> My LinkedIn</h3>
         </a>
       </div>
 
       <div class="col-6 text-center">
         <a href="images/shadia-resume-2020.pdf" target="_blank">
-          <h3 style="color:#fff; margin-top:6px;" class="wow rubberBand" data-wow-duration="3s" data-wow-delay="0.1s">
-            <i style="color:#fbf09b" class="fas fa-briefcase about-header wow rubberBand" data-wow-duration="2.5s"
-              data-wow-delay="0.1s"></i> My Resume</h3>
+          <h3 style="color:#fff; margin-top:6px;">
+            <i style="color:#fbf09b" class="fas fa-briefcase about-header" data-aos="fade" data-aos-duration="700" data-aos-easing="linear"></i> My Resume</h3>
         </a>
       </div>
     </div>
 
     <div class="row pt-4 mt-5">
       <div class="col-12">
-        <h4 style="color:#fff; margin-top:6px;" class="wow rubberBand" data-wow-duration="3s" data-wow-delay="0.1s">
+        <h4 style="color:#fff; margin-top:6px;" data-aos="fade" data-aos-duration="700" data-aos-easing="linear">
           You can contact me through the form below, or by emailing <b style="color:#fbf09b">shadia@shadiaali.ca</b>
         </h4>
       </div>
     </div>
 
-    <div class="form-group wow fadeInRight md-form md-bg form-lg">
+    <div class="form-group wow fadeInRight md-form md-bg form-lg" data-aos="fade" data-aos-duration="700" data-aos-easing="linear">
       <form id="my_form" method="post" onsubmit="submitForm(); return false;">
 
 
@@ -579,6 +509,9 @@
   <!-- SCRIPTS -->
     <!-- JQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" SameSite=None secure></script>
+    <!--AOS JS-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
     <!-- Bootstrap tooltips -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js" SameSite=None secure></script>
     <!-- Bootstrap core JavaScript -->
@@ -596,6 +529,7 @@
     $('#closeNav').on('click', function() {
     $('#myNav').css("display", "none");
     });
+
   </script>
     <script src="js/particles.js"></script>
     <script type="text/javascript" src="js/main.js">

@@ -12,6 +12,7 @@ html {
     //position: relative; 
     //width: 100%; 
     //overflow: hidden;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -21,6 +22,7 @@ body {
     height: 100%; 
     //width: 100%; 
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 .hidden{
@@ -34,6 +36,24 @@ body {
     color: white;
 }
 
+.close {
+    float: right;
+    font-size: 3.5rem !important;
+    font-weight: 1 !important;
+    line-height: 1;
+    color: #fff !important;
+    text-shadow: 0 1px 0 #000 !important;
+    opacity: 0.8 !important;
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {   
+
+    .modal .modal-fluid {
+        width: 90% !important;
+        max-width: 90%;
+    }
+}
 
 //input
 .md-form.md-bg input[type=date],

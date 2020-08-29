@@ -7,6 +7,10 @@
     overflow-x: hidden;
     background-image: url("../images/bg-colour.png");
     //position:relative;
+    
+    }
+    #particles-js{
+    overflow:hidden;
     }
 
     .name{
@@ -17,6 +21,7 @@
         left: 50%;
         white-space: nowrap;
         transform: translate(-50%, -50%);
+        
     }
     
     .largetext{
