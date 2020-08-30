@@ -123,3 +123,95 @@
 </body>
 
 </html>
+
+
+
+
+
+
+<div class="row d-flex justify-content-center">
+
+  <!-- Grid column -->
+  <div class="col-lg-6 py-5 pl-5">
+
+      <h1 class="text-center font-weight-normal mb-3">
+          {{portfolio.project_title}}</h1>
+      <hr class="mb-5">
+
+      <p class="text-muted">{{portfolio.project_description}}</p>
+
+      <p v-if="portfolio.project_description_2" class="text-muted">
+          {{portfolio.project_description_2}}</p>
+      <hr class="mt-5">
+      <ul class="list-unstyled font-small mt-5">
+
+          <li>
+              <h3 class=" mb-2"><strong>Client</strong></h3>
+              <h4 class="text-muted mb-4">{{portfolio.project_client}}</h4>
+          </li>
+
+          <li>
+              <h3 class=" mb-2"><strong>My Role</strong></h3>
+              <h4 class="text-muted mb-4">{{portfolio.project_role}}</h4>
+          </li>
+
+          <li>
+              <h3 class=" mb-2"><strong>Skills</strong></h3>
+              <h4 class="text-muted mb-4">{{portfolio.project_skills}}</h4>
+          </li>
+
+          <li v-if="portfolio.project_gitrepo">
+              <h3 class=" mb-2">
+                  <strong>Github
+                      Repo</strong></h3>
+              <a :href="portfolio.project_gitrepo" target="_blank"
+                  alt="link to github repository">
+                  <h4>Link to
+                      Github Repository</h4>
+              </a>
+          </li>
+
+
+
+          <br>
+          <li v-if="portfolio.project_livesite">
+              <h3 class=" mb-2"><strong>Live Demo</strong></h3>
+              <a :href="portfolio.project_livesite" target="_blank"
+                  alt="link to live demo">
+                  <h4>Link to
+                      live
+                      demo</h4>
+              </a>
+          </li>
+      </ul>
+
+  </div>
+  <!-- Grid column -->
+
+  <!-- Grid column -->
+  <div class="col-lg-6 mt-5">
+
+      <div v-if="portfolio.project_image" class="text-center">
+          <img class="img-fluid" :src="'images/' + portfolio.project_image"
+              alt="project image">
+      </div>
+
+      <div v-if="portfolio.project_image_2" class="text-center">
+          <br><img class="img-fluid"
+              :src="'images/' + portfolio.project_image_2"
+              alt="project image">
+      </div>
+
+      <div v-if="portfolio.project_video" class="mt-5">
+          <video class="video-fluid" controls id="projectvideo">
+              <source :src="'images/' + portfolio.project_video"
+                  type="video/mp4" />
+          </video>
+
+
+      </div>
+
+  </div>
+  <!-- Grid column -->
+
+</div>

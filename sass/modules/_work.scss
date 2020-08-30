@@ -10,10 +10,10 @@
 
 .card {
     background-color: $dark-grey !important;
-    min-width:300px;
-    height:350px !important;
+    //min-width:300px;
+    max-height:350px !important;
     overflow:hidden;
-    max-width:100%;
+    max-width:300px;
     background-image: url("../images/rainbowbg.png");
 
 
@@ -33,7 +33,7 @@
         -ms-transition: all 2s ease;
             transition: all 2s ease;
     width:100%;
-    max-height:300px;
+    max-height:350px;
     filter: saturate(1) contrast(100%) hue-rotate(0deg);
     -webkit-filter: saturate(1) contrast(100%) hue-rotate(0deg);
     
