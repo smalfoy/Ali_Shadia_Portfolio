@@ -12,4 +12,5 @@ www.shadiaali.ca
 - [vue.js](https://vue.com) 
 - [MD Bootstrap](https://mdbootstrap.com) 
 - [particles.js](https://vincentgarreau.com/particles.js/)
-- [SASS](https://sass-lang.com/) 
+- [Sass](https://sass-lang.com/) 
+- [gulp.js](https://gulpjs.com/) 
